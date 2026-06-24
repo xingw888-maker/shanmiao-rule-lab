@@ -163,12 +163,29 @@ def _is_clause_boundary(line: str) -> bool:
     return False
 
 
-def _infer_clause_type(clause: ClauseBlock) -> tuple[str, float]:
-    """Infer the type of a clause — PLACEHOLDER now that keywords are removed.
+_CLAUSE_TYPE_KEYWORDS = [
+    ("保修",   ["保修", "质保", "缺陷责任", "防水", "管线"]),
+    ("付款",   ["付款", "支付", "结算", "进度款", "预付款", "工程款", "发票", "拨款"]),
+    ("验收",   ["验收", "竣工", "交付", "移交", "接收", "组织验收"]),
+    ("违约",   ["违约", "罚金", "罚款", "逾期", "赔偿", "责任"]),
+    ("担保",   ["担保", "保证金", "保函", "履约", "投标"]),
+    ("质保金", ["质保金", "质量保证金", "保修金"]),
+    ("安全",   ["安全", "事故", "防护", "危险"]),
+    ("争议",   ["争议", "仲裁", "诉讼", "管辖"]),
+    ("工期",   ["工期", "开工", "竣工日期", "合同工期"]),
+    ("工程概况", ["工程概况", "工程名称", "工程地点", "承包范围"]),
+]
 
-    Always returns ("其他", 0.0).  Real classification happens via the
-    classifier parameter of split().
+
+def _infer_clause_type(clause: ClauseBlock) -> tuple[str, float]:
+    """Infer clause type from keyword match on title + content head.
+
+    Falls back to ("其他", 0.0) when no keyword matches.
     """
+    text = clause.clause_title + " " + clause.content[:200]
+    for type_name, keywords in _CLAUSE_TYPE_KEYWORDS:
+        if any(kw in text for kw in keywords):
+            return type_name, 0.9
     return _DEFAULT_TYPE, 0.0
 
 
@@ -328,6 +345,11 @@ class ClauseSplitter:
             raw_lines=content.splitlines(),
             level=1,
         )
+        # Always apply keyword inference as baseline — _apply_classifier
+        # overrides it when a real HybridClauseClassifier is present.
+        type_name, confidence = _infer_clause_type(block)
+        block.clause_type = type_name
+        block.type_confidence = confidence
         return block
     @classmethod
     def _apply_classifier(
@@ -409,7 +431,7 @@ class ClauseSplitter:
             proto = TypePrototype(
                 type_name=auto_label,
                 centroid=cluster.centroid,
-                  example_count=cluster.member_count,
+                example_count=cluster.member_count,
                 structural_centroid=cluster.centroid[:6],
                 numeric_centroid=cluster.centroid[6:10],
                 ngram_centroid={},

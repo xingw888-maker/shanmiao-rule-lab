@@ -1019,7 +1019,7 @@ class ShanmiaoKernel:
             # entry point: if a classifier is present, it overrides _TYPE_PATTERNS.
             # We use the hybrid classifier (which respects auto-clusters) when available.
             pass  # `hybrid` already serves this purpose if it respects auto-cluster data
-        clause_blocks = ClauseSplitter.split(text, classifier=classifier)
+        clause_blocks = ClauseSplitter.split(text)
         blocks_dicts = [
             dict(
                 clause_id=b.clause_id,

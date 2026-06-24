@@ -655,7 +655,7 @@ class PythonMatcher:
         # instead of returning NOT_APPLICABLE.  This handles contracts
         # where the clause splitter misclassifies blocks or the contract
         # format isn't recognised by the splitter.
-        if rule.clause_type and clause_blocks:
+        if rule.clause_type and clause_blocks and rule.id not in self._structured_inputs:
             clause_text_parts = []
             for cb in clause_blocks:
                 if cb.get("clause_type") == rule.clause_type:
@@ -667,10 +667,20 @@ class PythonMatcher:
                 clause_ngrams = self._tokeniser.ngrams(clause_tokens)
                 # handler is a function (not a bound method) — pass self explicitly
                 return handler(self, rule, clause_text, clause_tokens, clause_ngrams, text)
-            # else: no matching clause blocks found — fall through to
-            # full-text evaluation instead of returning NOT_APPLICABLE.
-            # This ensures rules still fire even when the clause splitter
-            # fails to identify the correct clause type.
+            # else: no matching clause blocks — clause splitter now uses
+            # deterministic keyword labels (not DBSCAN).  When no block matches
+            # the rule's clause_type, it means the contract genuinely lacks that
+            # clause category (e.g. no "验收" block →验收期限 rule does not apply).
+            # Returning NOT_APPLICABLE here prevents the handler's full-text
+            # fallback from undoing the clause_type gate.
+            else:
+                return self._make_evidence(
+                    rule, Verdict.NOT_APPLICABLE, text[:200], [],
+                    f"Rule '{rule.name}' not applicable: no clause blocks match "
+                    f"clause_type='{rule.clause_type}'. Splitter labels: "
+                    f"{sorted(set(cb.get('clause_type','') for cb in clause_blocks))}.",
+                    "", None,
+                )
 
         return handler(self, rule, target_text, target_tokens, target_ngrams, text)
     def _make_evidence(

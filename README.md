@@ -10,10 +10,10 @@ This repository is for education, research, and rule-engine experiments. It is n
 - 4 reviewed demo domains under `domains/validated/`.
 - 5 candidate domains under `domains/candidate/`.
 - Road2 numeric benchmark for tracking numeric-expression extraction limits.
-- T5.3 dual-path comparison for regex-only vs structured numeric extraction.
+- T5.4 dual-path comparison for regex-only vs structured numeric extraction.
 - Deterministic evidence-chain output.
 
-Known limitation: this public repository is primarily a rule-validation sandbox, not a finished real-document extraction product. T5.3 shows that structured extraction improves Chinese numeric expressions such as `万分之一` and `二十四`, while semantic ambiguity and multi-value aggregation still need rule/protocol work.
+Known limitation: this public repository is primarily a rule-validation sandbox, not a finished real-document extraction product. T5.4 shows that structured extraction improves Chinese numeric expressions such as `万分之一` and `二十四`, while semantic ambiguity, model flakiness, and multi-value aggregation still need rule/protocol work.
 
 ## Install
 
@@ -116,6 +116,19 @@ T5.3 added explicit clause-fragment validation mode and tightened extraction che
 - Remaining known misses: `cn-003` legal concept normalization, `cn-008` semantic role ambiguity, and `cn-010` multi-value payment aggregation.
 
 `validation_mode="clause"` is opt-in. The default document validation behavior is unchanged.
+
+## T5.4 Note
+
+T5.4 added fixed clause-type inference and clause-type gating improvements:
+
+- Regex-only baseline: `80.43%`.
+- Structured extraction path: `93.48%`.
+- Delta: `+13.05%`.
+- Fixed cases: 7.
+- Regressions: 1 (`cn-008-FP-01`, semantic ambiguity: settlement-material deadline vs completion-acceptance deadline).
+- Remaining known misses: `cn-003` legal concept normalization and `cn-010` multi-value payment aggregation.
+
+The T5.4 report intentionally keeps the remaining regression visible. It is a known semantic disambiguation limit, not a hidden pass.
 
 ## License
 

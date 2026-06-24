@@ -786,7 +786,7 @@
     },
     {
       "id": "cn-020",
-      "clause_type": "付款",
+      "clause_type": "担保",
       "name": "履约担保比例上限",
       "condition": {
         "type": "numeric_comparison",
@@ -820,7 +820,7 @@
     },
     {
       "id": "cn-021",
-      "clause_type": "付款",
+      "clause_type": "担保",
       "name": "投标保证金上限",
       "condition": {
         "type": "numeric_comparison",

@@ -84,12 +84,35 @@ Result on the same 46-sample Road2 set:
 
 The previous regression was removed. `cn-020-POS-01` also stopped failing as a short-text domain-classification case because the benchmark now uses explicit clause-fragment mode.
 
+## T5.4: Clause-Type Gating
+
+T5.4 made clause-type routing explicit. The splitter now infers stable clause types such as `保修`, `付款`, `验收`, and `担保`; numeric rules can then avoid searching unrelated clause blocks.
+
+Main implementation changes:
+
+- `clause_splitter.py`: fixed clause-type keyword inference.
+- `core.py`: clause-type mismatch now returns `NOT_APPLICABLE` instead of falling back to full-text search.
+- `kernel.py`: clause splitting uses the stable splitter path.
+- `construction/rules.json`: `cn-020` and `cn-021` moved from `付款` to `担保`.
+
+Result on the 46-sample Road2 set:
+
+| Metric | Regex only | Structured extraction |
+| --- | ---: | ---: |
+| Accuracy | 80.43% | 93.48% |
+| Correct samples | 37 / 46 | 43 / 46 |
+| Delta | - | +13.05% |
+| Fixed errors | - | 7 |
+| Regressions | - | 1 |
+| Remaining errors | - | 2 |
+
+The remaining regression is `cn-008-FP-01`: the text mentions completion acceptance but the 28-day number belongs to settlement-material submission, not acceptance organization. The clause gate helps the regex path, but the structured extraction path still treats it as an acceptance deadline. This is a semantic disambiguation limit.
+
 ## Remaining Errors
 
-Three errors remain after T5.3:
+Two stable errors remain after T5.4:
 
 - `cn-003-POS-02`: "reasonable service life" is a legal concept rather than a numeric value.
-- `cn-008-FP-01`: "submit settlement materials within 28 days" is not the same as "organize completion acceptance within 28 days".
 - `cn-010-POS-01`: payment-ratio sum logic requires multi-value extraction and semantic grouping.
 
 These are protocol, rule-design, or semantic-disambiguation problems. They should not be counted as simple numeric extraction failures.
