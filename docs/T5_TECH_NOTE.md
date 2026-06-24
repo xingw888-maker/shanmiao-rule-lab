@@ -65,14 +65,32 @@ One regression remained:
 
 This is an extraction hallucination, not a deterministic rule-handler bug. Possible mitigations include a higher confidence threshold, stricter prompting, and a requirement that the source span include an explicit duration.
 
+## T5.3: Clause Mode and Regression Removal
+
+T5.3 added an explicit `validation_mode="clause"` path for short rule-level samples. This mode is opt-in: the default `validation_mode="document"` behavior is unchanged. In clause mode, callers must pass an explicit `domain_id`; the kernel then trusts that domain and skips broad document-level rejection for short clause fragments.
+
+T5.3 also tightened structured extraction validation so hallucinated source spans are rejected before handler injection.
+
+Result on the same 46-sample Road2 set:
+
+| Metric | Regex only | Structured extraction |
+| --- | ---: | ---: |
+| Accuracy | 78.26% | 93.48% |
+| Correct samples | 36 / 46 | 43 / 46 |
+| Delta | - | +15.22% |
+| Fixed errors | - | 7 |
+| Regressions | - | 0 |
+| Remaining errors | - | 3 |
+
+The previous regression was removed. `cn-020-POS-01` also stopped failing as a short-text domain-classification case because the benchmark now uses explicit clause-fragment mode.
+
 ## Remaining Errors
 
-Four errors remained after T5.2:
+Three errors remain after T5.3:
 
 - `cn-003-POS-02`: "reasonable service life" is a legal concept rather than a numeric value.
 - `cn-008-FP-01`: "submit settlement materials within 28 days" is not the same as "organize completion acceptance within 28 days".
 - `cn-010-POS-01`: payment-ratio sum logic requires multi-value extraction and semantic grouping.
-- `cn-020-POS-01`: rule triggering still has a context-pattern gap.
 
 These are protocol, rule-design, or semantic-disambiguation problems. They should not be counted as simple numeric extraction failures.
 
@@ -97,4 +115,3 @@ The most useful next step is a small T5.3 pass:
 - Improve `cn-010` multi-value payment-ratio handling.
 
 After that, the same benchmark pattern can be expanded to other domains such as purchase and NDA rules.
-

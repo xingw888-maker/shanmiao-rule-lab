@@ -39,7 +39,7 @@ if "pydantic_settings" not in sys.modules:
         setattr(app.config.settings, _a, False if _a=="RUST_ENABLED" else "")
 
 from app.kernel import ShanmiaoKernel
-from tests.road2_llm_extractor import NumericFieldExtractor
+from tests.road2_llm_extractor import NumericFieldExtractor, NUMERIC_FIELDS
 
 SAMPLES_PATH = HERE / "road2_gold_samples.json"
 REPORT_PATH  = HERE / "road2_compare_report.json"
@@ -94,7 +94,8 @@ def run_regex_path(kernel: ShanmiaoKernel, sample: dict) -> dict:
     try:
         result = kernel.validate(
             text=sample["text"], domain_id=KERNEL_DOMAIN,
-            enable_layers=False, timeout_ms=30000)
+            enable_layers=False, timeout_ms=30000,
+            validation_mode="clause")
     except Exception as exc:
         return {"status": "ERROR", "rationale": f"{type(exc).__name__}: {exc}", "extracted_value": None}
     ev = _find_evidence(result, sample["rule_id"])
@@ -109,6 +110,8 @@ def run_extracted_path(kernel: ShanmiaoKernel, sample: dict,
     rule_id = sample["rule_id"]
     structured: dict[str, dict] = {}
 
+    label_by_rid = {f["rule_id"]: f["label"] for f in NUMERIC_FIELDS}
+
     if not use_mock and extractor is not None:
         key = sample["sample_id"]
         if key in cache:
@@ -120,7 +123,7 @@ def run_extracted_path(kernel: ShanmiaoKernel, sample: dict,
     structured_list = []
     for rid, ext in structured.items():
         structured_list.append({
-            "field": ext.get("field_label", ""),
+            "field": label_by_rid.get(rid, ext.get("field_label", "")),
             "value": ext.get("value"),
             "unit": ext.get("unit", ""),
             "operator_hint": ext.get("operator_hint", ""),
@@ -133,7 +136,8 @@ def run_extracted_path(kernel: ShanmiaoKernel, sample: dict,
         result = kernel.validate(
             text=sample["text"], domain_id=KERNEL_DOMAIN,
             enable_layers=False, timeout_ms=30000,
-            structured_extractions=structured_list if structured_list else None)
+            structured_extractions=structured_list if structured_list else None,
+            validation_mode="clause")
     except Exception as exc:
         return {"status": "ERROR", "rationale": f"{type(exc).__name__}: {exc}",
                 "extracted_value": None, "extract_info": {"n_structured": len(structured_list)}}

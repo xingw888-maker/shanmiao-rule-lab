@@ -868,7 +868,24 @@ class ShanmiaoKernel:
         enable_layers: bool = False, timeout_ms: int = 5000,
         _called_recursively: bool = False,
         structured_extractions: Optional[list[dict]] = None,
+        validation_mode: str = "document",
     ) -> dict:
+        """Validate contract text against loaded domain rules.
+
+        Args:
+            text: Contract text or clause fragment.
+            domain_id: Domain to validate against (e.g. "validated/construction").
+            validation_mode: "document" (default) — full contract, classifier
+                gates non-contract text. "clause" — short clause fragment,
+                trusts explicit domain_id and skips broad domain rejection.
+                Requires domain_id to be explicitly provided; raises ValueError
+                if validation_mode="clause" and domain_id is None.
+        """
+        if validation_mode == "clause" and not domain_id:
+            raise ValueError(
+                "validation_mode='clause' requires an explicit domain_id. "
+                "Clause fragments have no context for domain classification."
+            )
         # ── Multi-contract splitting ──
         if not _called_recursively:
             contracts = self._split_contracts(text)
@@ -959,6 +976,10 @@ class ShanmiaoKernel:
                     f"当前已加载域: {', '.join(sorted(VALID_DOMAINS))}。"
                     f"如需对此文本进行规则验证，请先提取该领域的候选规则。"
                 )
+
+        # ── Clause mode: trust explicit domain_id, skip broad domain rejection ──
+        if reject_reason and validation_mode == "clause":
+            reject_reason = None  # bypass — caller vouches for the domain
 
         if reject_reason:
             # ── R2.6: Recursion safety gate ──

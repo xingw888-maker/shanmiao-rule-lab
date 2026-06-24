@@ -10,10 +10,10 @@ This repository is for education, research, and rule-engine experiments. It is n
 - 4 reviewed demo domains under `domains/validated/`.
 - 5 candidate domains under `domains/candidate/`.
 - Road2 numeric benchmark for tracking numeric-expression extraction limits.
-- T5.2 dual-path comparison for regex-only vs structured numeric extraction.
+- T5.3 dual-path comparison for regex-only vs structured numeric extraction.
 - Deterministic evidence-chain output.
 
-Known limitation: this public repository is primarily a rule-validation sandbox, not a finished real-document extraction product. T5.2 shows that structured extraction improves Chinese numeric expressions such as `万分之一` and `二十四`, while semantic ambiguity and multi-value aggregation still need rule/protocol work.
+Known limitation: this public repository is primarily a rule-validation sandbox, not a finished real-document extraction product. T5.3 shows that structured extraction improves Chinese numeric expressions such as `万分之一` and `二十四`, while semantic ambiguity and multi-value aggregation still need rule/protocol work.
 
 ## Install
 
@@ -103,6 +103,19 @@ T5.2 added a dual-path comparison for numeric rules:
 - Remaining known misses: legal concepts without numeric values, semantic ambiguity, multi-value sum extraction, and one rule-triggering gap.
 
 The LLM/extraction path is used only to extract structured values. Rule verdicts remain deterministic handler results.
+
+## T5.3 Note
+
+T5.3 added explicit clause-fragment validation mode and tightened extraction checks:
+
+- Regex-only baseline: `78.26%`.
+- Structured extraction path: `93.48%`.
+- Delta: `+15.22%`.
+- Fixed cases: 7.
+- Regressions: 0.
+- Remaining known misses: `cn-003` legal concept normalization, `cn-008` semantic role ambiguity, and `cn-010` multi-value payment aggregation.
+
+`validation_mode="clause"` is opt-in. The default document validation behavior is unchanged.
 
 ## License
 

@@ -44,6 +44,7 @@ def validate_one(kernel: ShanmiaoKernel, sample: dict) -> dict:
             domain_id="validated/construction",
             enable_layers=False,
             timeout_ms=30000,
+            validation_mode="clause",
         )
     except Exception as exc:
         return {
