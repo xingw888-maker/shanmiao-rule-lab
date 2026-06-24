@@ -1,0 +1,100 @@
+# T5 Technical Note: Rule Reachability and Structured Numeric Extraction
+
+This note summarizes the T5 benchmark work in Shanmiao Rule Lab.
+
+Shanmiao Rule Lab is a research sandbox for deterministic domain-rule validation. It is not a legal service and does not provide legal advice. The goal of this benchmark is narrow: test whether structured numeric extraction can improve rule evaluation while keeping final verdicts deterministic and auditable.
+
+## Problem
+
+The Road2 benchmark started with 46 gold samples for 15 construction-domain numeric rules.
+
+The first baseline was misleading:
+
+- Accuracy: 58.7%.
+- False positives: 1.
+- Many false negatives were caused by missing rule reachability, not extraction quality.
+
+Seven numeric rules existed in `rules.json` but were not loaded through the active construction rule packages. In other words, part of the rule set was not on the field.
+
+## T5.1: Rule Reachability
+
+T5.1 fixed the rule-dispatch issue so that all 15 numeric or sum-numeric construction rules are visible to `validate()`.
+
+After the fix:
+
+- All 15 numeric rules are reachable.
+- Regex-only baseline accuracy: 76.09%.
+- The remaining errors became real extraction or rule-design problems rather than package-loading failures.
+
+This step matters because model comparison is only meaningful after the deterministic rule path is complete.
+
+## T5.2: Structured Numeric Extraction
+
+T5.2 added a dual-path benchmark:
+
+- Path A: regex-only validation.
+- Path B: structured numeric extraction followed by deterministic rule handlers.
+
+The extraction path is intentionally limited. It extracts fields such as value, unit, source text, and confidence. It does not make compliance judgments. The existing handlers still produce `PASSED`, `FAILED`, or `NOT_APPLICABLE`.
+
+Result on the 46-sample Road2 set:
+
+| Metric | Regex only | Structured extraction |
+| --- | ---: | ---: |
+| Accuracy | 76.09% | 89.13% |
+| Correct samples | 35 / 46 | 41 / 46 |
+| Delta | - | +13.04% |
+| Fixed errors | - | 7 |
+| Regressions | - | 1 |
+| Remaining errors | - | 4 |
+
+The 7 fixed cases were mainly Chinese numeric and fraction expressions that regex did not handle well:
+
+- `三年`
+- `二十四个月`
+- `百分之三`
+- `万分之一`
+- `千分之一`
+- `日千分之一`
+
+## Known Regression
+
+One regression remained:
+
+- `cn-002-FP-01`: the text mentioned underground waterproofing details but did not state a warranty period. The extraction path inferred a 5-year warranty from context, producing a false positive.
+
+This is an extraction hallucination, not a deterministic rule-handler bug. Possible mitigations include a higher confidence threshold, stricter prompting, and a requirement that the source span include an explicit duration.
+
+## Remaining Errors
+
+Four errors remained after T5.2:
+
+- `cn-003-POS-02`: "reasonable service life" is a legal concept rather than a numeric value.
+- `cn-008-FP-01`: "submit settlement materials within 28 days" is not the same as "organize completion acceptance within 28 days".
+- `cn-010-POS-01`: payment-ratio sum logic requires multi-value extraction and semantic grouping.
+- `cn-020-POS-01`: rule triggering still has a context-pattern gap.
+
+These are protocol, rule-design, or semantic-disambiguation problems. They should not be counted as simple numeric extraction failures.
+
+## Interpretation
+
+T5.1 and T5.2 support a limited but useful architecture:
+
+1. Use deterministic rules for final verdicts.
+2. Use structured extraction to provide facts to those rules.
+3. Preserve evidence: source text, value, unit, confidence, and rule rationale.
+4. Keep candidate and extraction outputs reviewable rather than treating them as authoritative.
+
+The result is not "AI legal judgment." It is a measurable improvement to numeric fact extraction inside an auditable rule engine.
+
+## Next Work
+
+The most useful next step is a small T5.3 pass:
+
+- Prevent the `cn-002` false positive by requiring explicit duration evidence.
+- Tighten `cn-008` context handling for completion acceptance.
+- Fix the `cn-020` rule-triggering gap.
+- Improve `cn-010` multi-value payment-ratio handling.
+
+After that, the same benchmark pattern can be expanded to other domains such as purchase and NDA rules.
+
