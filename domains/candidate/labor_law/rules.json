@@ -1,0 +1,2570 @@
+[
+  {
+    "id": "labor_law-001",
+    "name": "**第十九条** 劳动合同期限三个月以上不满一年的",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "**第十九条** 劳动合同期限三个月以上不满一年的",
+      "context_pattern": "期限",
+      "unit": "月",
+      "operator": "<=",
+      "expected": 1.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: **第十九条** 劳动合同期限三个月以上不满一年的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-002",
+    "name": "劳动合同期限一年以上不满三年的",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "劳动合同期限一年以上不满三年的",
+      "context_pattern": "期限",
+      "unit": "月",
+      "operator": "<=",
+      "expected": 2.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 劳动合同期限一年以上不满三年的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-003",
+    "name": "三年以上固定期限和无固定期限的劳动合同",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "三年以上固定期限和无固定期限的劳动合同",
+      "context_pattern": "期限",
+      "unit": "月",
+      "operator": "<=",
+      "expected": 6.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 三年以上固定期限和无固定期限的劳动合同",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "合同一致性",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-004",
+    "name": "或者自己开业生产或者经营同类产品、从事同类业务的竞业限制期限",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "或者自己开业生产或者经营同类产品、从事同类业务的竞业限制期限",
+      "context_pattern": "期限",
+      "unit": "年",
+      "operator": "<=",
+      "expected": 2.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 或者自己开业生产或者经营同类产品、从事同类业务的竞业限制期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-005",
+    "name": "**第十九条** 劳动合同期限三个月以上不满一年的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过一个月"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过一个月"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第十九条** 劳动合同期限三个月以上不满一年的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-006",
+    "name": "劳动合同期限一年以上不满三年的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过二个月"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过二个月"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳动合同期限一年以上不满三年的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-007",
+    "name": "三年以上固定期限和无固定期限的劳动合同",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过六个月"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过六个月"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 三年以上固定期限和无固定期限的劳动合同",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "合同一致性",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-008",
+    "name": "以完成一定工作任务为期限的劳动合同或者劳动合同期限不满三个月的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "约定试用期"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 约定试用期"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 以完成一定工作任务为期限的劳动合同或者劳动合同期限不满三个月的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-009",
+    "name": "或者自己开业生产或者经营同类产品、从事同类业务的竞业限制期限",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过二年"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过二年"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 或者自己开业生产或者经营同类产品、从事同类业务的竞业限制期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-010",
+    "name": "向其支付经济补偿的标准按职工月平均工资三倍的数额支付",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "向其支付经济补偿的标准按职工月平均工资三倍的数额支付",
+      "context_pattern": "向其支付经济补偿的标",
+      "unit": "年",
+      "operator": "<=",
+      "expected": 12.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 向其支付经济补偿的标准按职工月平均工资三倍的数额支付",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-011",
+    "name": "用工单位应当根据工作岗位的实际需要与劳务派遣单位确定派遣期限",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "将连续用工期限分割订立数个短期劳务派遣协议"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 将连续用工期限分割订立数个短期劳务派遣协议"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用工单位应当根据工作岗位的实际需要与劳务派遣单位确定派遣期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "工程管理",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-012",
+    "name": "前款规定的临时性工作岗位是指存续时间",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "前款规定的临时性工作岗位是指存续时间",
+      "context_pattern": "前款规定的临时性工作",
+      "unit": "月",
+      "operator": "<=",
+      "expected": 6.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 前款规定的临时性工作岗位是指存续时间",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-013",
+    "name": "非全日制用工劳动报酬结算支付周期最长",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "非全日制用工劳动报酬结算支付周期最长",
+      "context_pattern": "非全日制用工劳动报酬",
+      "unit": "日",
+      "operator": "<=",
+      "expected": 15.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 非全日制用工劳动报酬结算支付周期最长",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-014",
+    "name": "用人单位与劳动者",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "劳动合同约定的义务"
+      ],
+      "message_if_missing": "合同缺少用人单位与劳动者条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用人单位与劳动者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-015",
+    "name": "**第九条** 用人单位招用劳动者",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "扣押劳动者的居民身份证",
+        "其他证件"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 扣押劳动者的居民身份证, 其他证件"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第九条** 用人单位招用劳动者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-016",
+    "name": "不得扣押劳动者的居民身份证和其他证件",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "要求劳动者提供担保或者",
+        "其他名义向劳动者收取财物"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 要求劳动者提供担保或者, 其他名义向劳动者收取财物"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 不得扣押劳动者的居民身份证和其他证件",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-017",
+    "name": "**第二十条** 劳动者在试用期的工资不得低于本单位相同岗位最低档工资或者劳动合同约定工资的百分之八十",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "低于用人单位所在地的最低工资标准"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 低于用人单位所在地的最低工资标准"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第二十条** 劳动者在试用期的工资不得低于本单位相同岗位最低档工资或者劳动合同约定工资的百分之八十",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "质量标准",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-018",
+    "name": "除劳动者有本法第三十九条和第四十条第一项、第二项规定的情形外",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "解除劳动合同"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 解除劳动合同"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 除劳动者有本法第三十九条和第四十条第一项、第二项规定的情形外",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-019",
+    "name": "劳动者违反服务期约定的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "约定向用人单位支付违约金"
+      ],
+      "message_if_missing": "合同缺少劳动者违反服务期约定的条款——《民法典》第585条要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳动者违反服务期约定的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-020",
+    "name": "违约金的数额",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过用人单位提供的培训费用"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过用人单位提供的培训费用"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 违约金的数额",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-021",
+    "name": "用人单位要求劳动者支付的违约金",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过服务期尚未履行部分所应分摊的培训费用"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过服务期尚未履行部分所应分摊的培训费用"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用人单位要求劳动者支付的违约金",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-022",
+    "name": "劳动者违反竞业限制约定的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "约定向用人单位支付违约金"
+      ],
+      "message_if_missing": "合同缺少劳动者违反竞业限制约定的条款——《民法典》第585条要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳动者违反竞业限制约定的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-023",
+    "name": "竞业限制的范围、地域、期限由用人单位与劳动者约定",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "违反法律",
+        "法规的规定"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 违反法律, 法规的规定"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 竞业限制的范围、地域、期限由用人单位与劳动者约定",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-024",
+    "name": "竞业限制的约定",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "违反法律",
+        "法规的规定"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 违反法律, 法规的规定"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 竞业限制的约定",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-025",
+    "name": "**第二十五条** 除本法第二十二条和第二十三条规定的情形外",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "劳动者约定由劳动者承担违约金"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 劳动者约定由劳动者承担违约金"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第二十五条** 除本法第二十二条和第二十三条规定的情形外",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-026",
+    "name": "# 第三章 劳动合同的履行和变更 **第二十九条** 用人单位与劳动者",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "劳动合同的约定"
+      ],
+      "message_if_missing": "合同缺少# 第三章 劳动合同的履行和变更 **第二十九条** 用人单位与劳动者条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: # 第三章 劳动合同的履行和变更 **第二十九条** 用人单位与劳动者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-027",
+    "name": "**第三十条** 用人单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "劳动合同约定",
+        "国家规定"
+      ],
+      "message_if_missing": "合同缺少**第三十条** 用人单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第三十条** 用人单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-028",
+    "name": "**第三十一条** 用人单位应当严格执行劳动定额标准",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "强迫或者变相强迫劳动者加班"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 强迫或者变相强迫劳动者加班"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第三十一条** 用人单位应当严格执行劳动定额标准",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "质量标准",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-029",
+    "name": "用人单位安排加班的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "国家有关规定向劳动者支付加班费"
+      ],
+      "message_if_missing": "合同缺少用人单位安排加班的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用人单位安排加班的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-030",
+    "name": "在六个月内重新招用人员的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "被裁减的人员"
+      ],
+      "message_if_missing": "合同缺少在六个月内重新招用人员的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 在六个月内重新招用人员的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-031",
+    "name": "**第四十二条** 劳动者有下列情形之一的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "依照本法第四十条",
+        "第四十一条的规定解除劳动合同：（一）从事接触职业病危害作业的劳动者未进行离岗前职业健康检查"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 依照本法第四十条, 第四十一条的规定解除劳动合同：（一）从事接触职业病危害作业的劳动者未进行离岗前职业健康检查"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第四十二条** 劳动者有下列情形之一的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-032",
+    "name": "劳动者",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "双方约定"
+      ],
+      "message_if_missing": "合同缺少劳动者条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳动者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-033",
+    "name": "**第五十五条** 集体合同中劳动报酬和劳动条件等标准",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "低于当地人民政府规定的最低标准"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 低于当地人民政府规定的最低标准"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第五十五条** 集体合同中劳动报酬和劳动条件等标准",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "质量标准",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-034",
+    "name": "用人单位与劳动者订立的劳动合同中劳动报酬和劳动条件等标准",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "低于集体合同规定的标准"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 低于集体合同规定的标准"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用人单位与劳动者订立的劳动合同中劳动报酬和劳动条件等标准",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "质量标准",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-035",
+    "name": "## 第二节 劳务派遣 **第五十七条** 经营劳务派遣业务应当具备下列条件：（一）注册资本",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "少于人民币二百万元"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 少于人民币二百万元"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: ## 第二节 劳务派遣 **第五十七条** 经营劳务派遣业务应当具备下列条件：（一）注册资本",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-036",
+    "name": "任何单位和个人",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "经营劳务派遣业务"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 经营劳务派遣业务"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 任何单位和个人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-037",
+    "name": "**第五十八条** 劳务派遣单位是本法所称用人单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "用人单位对劳动者的义务"
+      ],
+      "message_if_missing": "合同缺少**第五十八条** 劳务派遣单位是本法所称用人单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第五十八条** 劳务派遣单位是本法所称用人单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-038",
+    "name": "劳务派遣单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "所在地人民政府规定的最低工资标准"
+      ],
+      "message_if_missing": "合同缺少劳务派遣单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳务派遣单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-039",
+    "name": "劳务派遣单位",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "克扣用工单位按照劳务派遣协议支付给被派遣劳动者的劳动报酬"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 克扣用工单位按照劳务派遣协议支付给被派遣劳动者的劳动报酬"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳务派遣单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-040",
+    "name": "劳务派遣单位和用工单位",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "向被派遣劳动者收取费用"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 向被派遣劳动者收取费用"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳务派遣单位和用工单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-041",
+    "name": "**第六十二条** 用工单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "下列义务：（一）执行国家劳动标准"
+      ],
+      "message_if_missing": "合同缺少**第六十二条** 用工单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第六十二条** 用工单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "质量标准",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-042",
+    "name": "用工单位",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "将被派遣劳动者再派遣到其他用人单位"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 将被派遣劳动者再派遣到其他用人单位"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用工单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-043",
+    "name": "用工单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "同工同酬原则"
+      ],
+      "message_if_missing": "合同缺少用工单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用工单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-044",
+    "name": "用工单位应当严格控制劳务派遣用工数量",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过其用工总量的一定比例"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过其用工总量的一定比例"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用工单位应当严格控制劳务派遣用工数量",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-045",
+    "name": "**第六十七条** 用人单位",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "设立劳务派遣单位向本单位或者所属单位派遣劳动者"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 设立劳务派遣单位向本单位或者所属单位派遣劳动者"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第六十七条** 用人单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-046",
+    "name": "后订立的劳动合同",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "影响先订立的劳动合同的履行"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 影响先订立的劳动合同的履行"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 后订立的劳动合同",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-047",
+    "name": "**第七十条** 非全日制用工双方当事人",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "约定试用期"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 约定试用期"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第七十条** 非全日制用工双方当事人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-048",
+    "name": "**第七十二条** 非全日制用工小时计酬标准",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "低于用人单位所在地人民政府规定的最低小时工资标准"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 低于用人单位所在地人民政府规定的最低小时工资标准"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第七十二条** 非全日制用工小时计酬标准",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "质量标准",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-049",
+    "name": "非全日制用工劳动报酬结算支付周期最长",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过十五日"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过十五日"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 非全日制用工劳动报酬结算支付周期最长",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-050",
+    "name": "给劳动者造成损害的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "赔偿责任"
+      ],
+      "message_if_missing": "合同缺少给劳动者造成损害的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 给劳动者造成损害的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-051",
+    "name": "劳动报酬低于当地最低工资标准的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "其差额部分"
+      ],
+      "message_if_missing": "合同缺少劳动报酬低于当地最低工资标准的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳动报酬低于当地最低工资标准的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-052",
+    "name": "有过错的一方",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "赔偿责任"
+      ],
+      "message_if_missing": "合同缺少有过错的一方条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 有过错的一方",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-053",
+    "name": "给用人单位造成损失的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "赔偿责任"
+      ],
+      "message_if_missing": "合同缺少给用人单位造成损失的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 给用人单位造成损失的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-054",
+    "name": "给其他用人单位造成损失的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "连带赔偿责任"
+      ],
+      "message_if_missing": "合同缺少给其他用人单位造成损失的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 给其他用人单位造成损失的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-055",
+    "name": "给劳动者或者用人单位造成损害的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "赔偿责任"
+      ],
+      "message_if_missing": "合同缺少给劳动者或者用人单位造成损害的条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 给劳动者或者用人单位造成损害的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-056",
+    "name": "依照本法第四十六条规定",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "经济补偿的"
+      ],
+      "message_if_missing": "合同缺少依照本法第四十六条规定条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 依照本法第四十六条规定",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-057",
+    "name": "**第十七条** 劳动合同",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "下条款：（一）用人单位的名称",
+        "住所",
+        "法定代表人或者主要负责人"
+      ],
+      "message_if_missing": "合同缺少**第十七条** 劳动合同条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第十七条** 劳动合同",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-058",
+    "name": "**第三十一条** 用人单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "劳动定额标准"
+      ],
+      "message_if_missing": "合同缺少**第三十一条** 用人单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第三十一条** 用人单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "质量标准",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-059",
+    "name": "劳动者不要求继续履行劳动合同或者劳动合同已经不能继续履行的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "本法第八十七条规定支付赔偿金"
+      ],
+      "message_if_missing": "合同缺少劳动者不要求继续履行劳动合同或者劳动合同已经不能继续履行的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳动者不要求继续履行劳动合同或者劳动合同已经不能继续履行的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-060",
+    "name": "## 第二节 劳务派遣 **第五十七条** 经营劳务派遣业务",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "下列条件：（一）注册资本不得少于人民币二百万元"
+      ],
+      "message_if_missing": "合同缺少## 第二节 劳务派遣 **第五十七条** 经营劳务派遣业务条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: ## 第二节 劳务派遣 **第五十七条** 经营劳务派遣业务",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-061",
+    "name": "未经许可",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "经营劳务派遣业务"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 经营劳务派遣业务"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 未经许可",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-062",
+    "name": "劳务派遣协议",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "派遣岗位",
+        "人员数量",
+        "派遣期限",
+        "劳动报酬",
+        "社会保险费的数额",
+        "支付方式",
+        "违反协议的责任"
+      ],
+      "message_if_missing": "合同缺少劳务派遣协议条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳务派遣协议",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-063",
+    "name": "载明或者约定的向被派遣劳动者支付的劳动报酬",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "前款规定"
+      ],
+      "message_if_missing": "合同缺少载明或者约定的向被派遣劳动者支付的劳动报酬条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 载明或者约定的向被派遣劳动者支付的劳动报酬",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-064",
+    "name": "用人单位和劳动者都",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "有关情况",
+        "材料"
+      ],
+      "message_if_missing": "合同缺少用人单位和劳动者都条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用人单位和劳动者都",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-065",
+    "name": "**第八十七条** 用人单位违反本法规定解除或者终止劳动合同的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "本法第四十七条规定的经济补偿标准的二倍向劳动者支付赔偿金"
+      ],
+      "message_if_missing": "合同缺少**第八十七条** 用人单位违反本法规定解除或者终止劳动合同的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第八十七条** 用人单位违反本法规定解除或者终止劳动合同的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-066",
+    "name": "该单位或者其出资人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "本法有关规定向劳动者支付劳动报酬",
+        "经济补偿",
+        "赔偿金"
+      ],
+      "message_if_missing": "合同缺少该单位或者其出资人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 该单位或者其出资人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-067",
+    "name": "工会或者职工认为不适当的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "向用人单位提出"
+      ],
+      "message_if_missing": "合同缺少工会或者职工认为不适当的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 工会或者职工认为不适当的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-068",
+    "name": "用人单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "了解劳动者",
+        "劳动合同直接相关的基本情况"
+      ],
+      "message_if_missing": "合同缺少用人单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用人单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-069",
+    "name": "与劳动者约定的劳动报酬",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "新招用的劳动者的劳动报酬按照集体合同规定的标准执行"
+      ],
+      "message_if_missing": "合同缺少与劳动者约定的劳动报酬条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 与劳动者约定的劳动报酬",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "质量标准",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-070",
+    "name": "**第十八条** 劳动合同对劳动报酬和劳动条件等标准约定",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "引发争议的"
+      ],
+      "message_if_missing": "合同缺少**第十八条** 劳动合同对劳动报酬和劳动条件等标准约定条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第十八条** 劳动合同对劳动报酬和劳动条件等标准约定",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "质量标准",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-071",
+    "name": "劳动者对危害生命安全和身体健康的劳动条件",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "对用人单位提出批评",
+        "检举",
+        "控告"
+      ],
+      "message_if_missing": "合同缺少劳动者对危害生命安全和身体健康的劳动条件条款——《建设工程安全生产管理条例》要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳动者对危害生命安全和身体健康的劳动条件",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "安全生产",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-072",
+    "name": "用人单位违反法律、行政法规规定或者劳动合同约定的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "要求用人单位纠正"
+      ],
+      "message_if_missing": "合同缺少用人单位违反法律、行政法规规定或者劳动合同约定的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用人单位违反法律、行政法规规定或者劳动合同约定的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-073",
+    "name": "**第六十四条** 被派遣劳动者",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "在劳务派遣单位或者用工单位依法参加或者组织工会"
+      ],
+      "message_if_missing": "合同缺少**第六十四条** 被派遣劳动者条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第六十四条** 被派遣劳动者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-074",
+    "name": "**第七十五条** 县级以上地方人民政府劳动行政部门实施监督检查时",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "查阅",
+        "劳动合同",
+        "集体合同有关的材料"
+      ],
+      "message_if_missing": "合同缺少**第七十五条** 县级以上地方人民政府劳动行政部门实施监督检查时条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第七十五条** 县级以上地方人民政府劳动行政部门实施监督检查时",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-075",
+    "name": "**第七十七条** 劳动者合法权益受到侵害的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "要求有关部门依法处理"
+      ],
+      "message_if_missing": "合同缺少**第七十七条** 劳动者合法权益受到侵害的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第七十七条** 劳动者合法权益受到侵害的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-076",
+    "name": "用人单位违反劳动法律、法规和劳动合同、集体合同的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "提出意见或者要求纠正"
+      ],
+      "message_if_missing": "合同缺少用人单位违反劳动法律、法规和劳动合同、集体合同的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用人单位违反劳动法律、法规和劳动合同、集体合同的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-077",
+    "name": "**第七十九条** 任何组织或者个人对违反本法的行为都",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "举报"
+      ],
+      "message_if_missing": "合同缺少**第七十九条** 任何组织或者个人对违反本法的行为都条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第七十九条** 任何组织或者个人对违反本法的行为都",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-078",
+    "name": "应当订立无固定期限劳动合同之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "向劳动者每月支付二倍的工资"
+      ],
+      "message_if_missing": "合同缺少应当订立无固定期限劳动合同之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 应当订立无固定期限劳动合同之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-079",
+    "name": "本法施行后续订固定期限劳动合同时",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "计算"
+      ],
+      "message_if_missing": "合同缺少本法施行后续订固定期限劳动合同时条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 本法施行后续订固定期限劳动合同时",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "合同一致性",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-080",
+    "name": "用工之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "即",
+        "劳动者建立劳动关系"
+      ],
+      "message_if_missing": "合同缺少用工之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用工之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-081",
+    "name": "用人单位不得与劳动者约定由劳动者",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "违约金"
+      ],
+      "message_if_missing": "合同缺少用人单位不得与劳动者约定由劳动者条款——《民法典》第585条要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 用人单位不得与劳动者约定由劳动者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-082",
+    "name": "**第三十三条** 用人单位变更名称、法定代表人、主要",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人或者投资人等事项"
+      ],
+      "message_if_missing": "合同缺少**第三十三条** 用人单位变更名称、法定代表人、主要条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第三十三条** 用人单位变更名称、法定代表人、主要",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-083",
+    "name": "收到集体合同文本之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十五日内未提出异议的"
+      ],
+      "message_if_missing": "合同缺少收到集体合同文本之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到集体合同文本之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-084",
+    "name": "工会可以依法要求用人单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "责任"
+      ],
+      "message_if_missing": "合同缺少工会可以依法要求用人单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 工会可以依法要求用人单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "工程管理",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-085",
+    "name": "# 第六章 监督检查 **第七十三条** 国务院劳动行政部门",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "全国劳动合同制度实施的监督管理"
+      ],
+      "message_if_missing": "合同缺少# 第六章 监督检查 **第七十三条** 国务院劳动行政部门条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: # 第六章 监督检查 **第七十三条** 国务院劳动行政部门",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-086",
+    "name": "县级以上地方人民政府劳动行政部门",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "本行政区域内劳动合同制度实施的监督管理"
+      ],
+      "message_if_missing": "合同缺少县级以上地方人民政府劳动行政部门条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 县级以上地方人民政府劳动行政部门",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-087",
+    "name": "应当",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "赔偿责任"
+      ],
+      "message_if_missing": "合同缺少应当条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 应当",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-088",
+    "name": "有过错的一方应当",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "赔偿责任"
+      ],
+      "message_if_missing": "合同缺少有过错的一方应当条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 有过错的一方应当",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-089",
+    "name": "劳务派遣单位与用工单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "连带赔偿责任"
+      ],
+      "message_if_missing": "合同缺少劳务派遣单位与用工单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 劳务派遣单位与用工单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-090",
+    "name": "发包的组织与个人承包经营者",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "连带赔偿责任"
+      ],
+      "message_if_missing": "合同缺少发包的组织与个人承包经营者条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 发包的组织与个人承包经营者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-091",
+    "name": "对直接",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "的主管人员",
+        "其他直接责任人员"
+      ],
+      "message_if_missing": "合同缺少对直接条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 对直接",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "工程管理",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-092",
+    "name": "本法施行之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "一个月内订立"
+      ],
+      "message_if_missing": "合同缺少本法施行之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 本法施行之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-093",
+    "name": "2008年1月1日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "施行"
+      ],
+      "message_if_missing": "合同缺少2008年1月1日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 2008年1月1日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-094",
+    "name": "# 中华人民共和国劳动合同法 >-",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "# 中华人民共和国劳动合同法 >-",
+      "context_pattern": "# 中华人民共和国劳",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2007.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: # 中华人民共和国劳动合同法 >-",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-095",
+    "name": ">- 根据",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": ">- 根据",
+      "context_pattern": ">- 根据",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2012.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: >- 根据",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-096",
+    "name": "表大会常务委员会</br>> 生效日期：",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "表大会常务委员会</br>> 生效日期：",
+      "context_pattern": "表大会常务委员会</",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2013.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 表大会常务委员会</br>> 生效日期：",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  },
+  {
+    "id": "labor_law-097",
+    "name": "**第九十八条** 本法自",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "**第九十八条** 本法自",
+      "context_pattern": "**第九十八条** ",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2008.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: **第九十八条** 本法自",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "labor_law"
+  }
+]

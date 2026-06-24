@@ -1,0 +1,188 @@
+[
+  {
+    "id": "nationality_law-001",
+    "name": "被批准加入中国国籍的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "再保留外国国籍"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 再保留外国国籍"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 被批准加入中国国籍的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "nationality_law"
+  },
+  {
+    "id": "nationality_law-002",
+    "name": "**第十二条** 国家工作人员和现役军人",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "退出中国国籍"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 退出中国国籍"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第十二条** 国家工作人员和现役军人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "nationality_law"
+  },
+  {
+    "id": "nationality_law-003",
+    "name": "被批准恢复中国国籍的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "再保留外国国籍"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 再保留外国国籍"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 被批准恢复中国国籍的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "nationality_law"
+  },
+  {
+    "id": "nationality_law-004",
+    "name": "除第九条规定的以外",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "申请手续"
+      ],
+      "message_if_missing": "合同缺少除第九条规定的以外条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 除第九条规定的以外",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "nationality_law"
+  },
+  {
+    "id": "nationality_law-005",
+    "name": "公布之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "施行"
+      ],
+      "message_if_missing": "合同缺少公布之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 公布之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "nationality_law"
+  },
+  {
+    "id": "nationality_law-006",
+    "name": "# 中华人民共和国国籍法-",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "# 中华人民共和国国籍法-",
+      "context_pattern": "# 中华人民共和国国",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 1980.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: # 中华人民共和国国籍法-",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "nationality_law"
+  },
+  {
+    "id": "nationality_law-007",
+    "name": "全国人民代表大会常务委员会- 生效日期：",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "全国人民代表大会常务委员会- 生效日期：",
+      "context_pattern": "全国人民代表大会常务",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 1980.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 全国人民代表大会常务委员会- 生效日期：",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "nationality_law"
+  }
+]

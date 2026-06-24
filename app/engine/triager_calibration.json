@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "description": "Default triager calibration for the three-state classification layer (三态分流层). Classifies FAILED evidence items into FAIL (confident violation) or NEEDS_REVIEW (borderline, needs human review).",
+  "pass_threshold": 0.80,
+  "fail_threshold": 0.30,
+  "boundary_epsilon_pct": 0.15,
+  "signals": {
+    "source_credibility": {
+      "weight": 1.0,
+      "description": "Rule source trustworthiness. Higher weight because source quality is the strongest indicator of reliability."
+    },
+    "extraction_quality": {
+      "weight": 0.8,
+      "description": "Quality of extraction method (manual > structured > llm > keyword_scan > conjecture_mine)."
+    },
+    "boundary_proximity": {
+      "weight": 1.2,
+      "description": "How close a numeric value is to the legal threshold. Highest weight for numeric_comparison rules — borderline values are the most common source of false positives."
+    },
+    "matched_terms_strength": {
+      "weight": 0.6,
+      "description": "Specificity and count of matched terms. Few or generic matched terms indicate a weak signal."
+    },
+    "belief_entropy": {
+      "weight": 0.9,
+      "description": "Entropy from belief propagation network. High entropy means contradictory evidence from neighbor rules."
+    },
+    "severity_gate": {
+      "weight": 0.5,
+      "description": "Severity level gating. 'info' severity FAILED verdicts are less urgent and more likely to be false positives."
+    }
+  }
+}

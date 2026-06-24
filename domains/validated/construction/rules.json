@@ -1,0 +1,856 @@
+{
+  "id": "construction-general-contract",
+  "name": "建设工程一般规则包",
+  "version": "1.0.0",
+  "domain": "construction",
+  "maintainer": "manual-audited",
+  "description": "适用所有建设工程合同类型的通用规则包。覆盖屋面防水保修、电气管线保修、给排水管道保修、质保金比例、缺陷责任期、竣工验收组织期限、违约金比率、付款比例、保修书、竣工验收条款、安全生产条款、计价一致性、责任一致性、付款逾期利息、争议解决、付款条件、违约金基数、质保期起算。24条规则，全部手工审核，L0_VALIDATED。",
+  "disclaimer": "本规则包仅提供辅助初审建议，校验结果不具备法律效力。所有结论均应经过专业律师独立审核确认。",
+  "applicable_contract_types": [],
+  "rules": [
+    {
+      "id": "cn-001",
+      "clause_type": "保修",
+      "name": "屋面防水工程保修期限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "屋面防水保修期",
+        "context_pattern": "屋面.*防水.*保修[^，。；;]{0,10}[五5]|屋面.*防水.*保修期限[^，。；;]{0,10}[五5]",
+        "unit": "年",
+        "operator": ">=",
+        "expected": 5,
+        "legal_ref": "国务院令第279号第40条(二)"
+      },
+      "severity": "fatal",
+      "message": "屋面防水最低保修期限为5年",
+      "category": "保修期限",
+      "source": "国务院",
+      "source_credibility": 1.0,
+      "extraction_method": "structured",
+      "structured_template": "numeric_warranty_is",
+      "scope": {
+        "contract_types": [
+          "屋面防水工程",
+          "大型工程",
+          "总承包工程"
+        ],
+        "exclude_contract_types": [
+          "维修工程",
+          "购销合同"
+        ],
+        "min_contract_value": 0,
+        "note": "屋面防水保修5年，小维修合同不适用"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-004",
+      "clause_type": "保修",
+      "name": "电气管线保修期限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "电气管线保修期",
+        "context_pattern": "电气.*保修|电气管线.*安装",
+        "unit": "年",
+        "operator": ">=",
+        "expected": 2,
+        "legal_ref": "国务院令第279号第40条(四)"
+      },
+      "severity": "fatal",
+      "message": "电气管线最低保修期限为2年",
+      "category": "保修期限",
+      "source": "国务院",
+      "source_credibility": 1.0,
+      "extraction_method": "structured",
+      "structured_template": "numeric_warranty_is",
+      "scope": {
+        "contract_types": [
+          "大型工程",
+          "总承包工程",
+          "安装工程"
+        ],
+        "exclude_contract_types": [
+          "屋面防水工程",
+          "购销合同"
+        ],
+        "min_contract_value": 0,
+        "note": "电气管线保修适用安装类合同"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-005",
+      "clause_type": "保修",
+      "name": "给排水管道保修期限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "给排水管道保修期",
+        "context_pattern": "给排水.*保修|给排水管道",
+        "unit": "年",
+        "operator": ">=",
+        "expected": 2,
+        "legal_ref": "国务院令第279号第40条(四)"
+      },
+      "severity": "fatal",
+      "message": "给排水管道最低保修期限为2年",
+      "category": "保修期限",
+      "source": "国务院",
+      "source_credibility": 1.0,
+      "extraction_method": "structured",
+      "structured_template": "numeric_warranty_is",
+      "scope": {
+        "contract_types": [
+          "大型工程",
+          "总承包工程",
+          "安装工程"
+        ],
+        "exclude_contract_types": [
+          "屋面防水工程",
+          "购销合同"
+        ],
+        "min_contract_value": 0,
+        "note": "给排水管道保修适用安装类合同"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-006",
+      "clause_type": "付款",
+      "name": "质量保证金比例上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "质量保证金比例",
+        "context_pattern": "质量保证金.{0,30}\\d+%|质保金.{0,30}\\d+%|保证金.{0,30}预留.{0,10}\\d+%",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 3,
+        "legal_ref": "建质[2017]138号第7条"
+      },
+      "severity": "major",
+      "message": "质量保证金预留比例不得超过3%",
+      "category": "工程款",
+      "source": "住建部",
+      "source_credibility": 0.95,
+      "extraction_method": "structured",
+      "structured_template": "numeric_max_not_exceed",
+      "scope": {
+        "exclude_contract_types": [
+          "购销合同"
+        ],
+        "note": "质量保证金预留比例，非建设工程合同不适用"
+      },
+      "legal_hierarchy": "dept_rule"
+    },
+    {
+      "id": "cn-009",
+      "clause_type": "违约",
+      "name": "逾期违约金日罚率上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "逾期违约金日罚率",
+        "context_pattern": "违约金.*日罚|逾期违约金.*日|日万分之|违约金日|逾期.*罚则",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 0.05,
+        "legal_ref": "《民法典》第585条及最高法合同编通则解释第65条"
+      },
+      "severity": "minor",
+      "message": "逾期违约金日罚率一般不高于万分之五",
+      "category": "违约条款",
+      "source": "全国人大/最高法",
+      "source_credibility": 0.9,
+      "extraction_method": "structured",
+      "structured_template": "numeric_max_not_exceed",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "违约金比率通用"
+      },
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cn-010",
+      "clause_type": "付款",
+      "name": "付款比例合计一致性",
+      "condition": {
+        "type": "sum_numeric_comparison",
+        "label": "付款比例合计",
+        "context_pattern": "(?:预付款|进度款|结算款|工程款).*?[至为].*?%|付款至.*?%|支付至.*?%|付至.*?%",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 105,
+        "legal_ref": "GF-2017-0201第12条 合同惯例"
+      },
+      "severity": "major",
+      "message": "付款比例合计不应超过100%（含增值税等附加比例后不超过110%）",
+      "category": "工程款",
+      "source": "合同惯例",
+      "source_credibility": 0.8,
+      "extraction_method": "structured",
+      "scope": {
+        "contract_types": [
+          "大型工程",
+          "总承包工程"
+        ],
+        "exclude_contract_types": [],
+        "min_contract_value": 100000,
+        "note": "付款比例仅适用大型/总承包合同。放宽至110%以容忍增值税税率等非付款比例干扰"
+      },
+      "structured_template": "sum_numeric_not_exceed",
+      "legal_hierarchy": "industry_standard"
+    },
+    {
+      "id": "cn-014",
+      "clause_type": "保修",
+      "name": "必须出具质量保修书",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "质量保修书",
+          "保修书",
+          "工程质量保修书"
+        ],
+        "message_if_missing": "合同缺少质量保修书条款 —— 《条例》第39条强制要求"
+      },
+      "severity": "fatal",
+      "message": "竣工验收时必须出具质量保修书",
+      "category": "质量保修",
+      "source": "国务院令第279号第39条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "scope": {
+        "exclude_contract_types": [
+          "购销合同"
+        ],
+        "note": "质量保修书是建设工程强制要求，非建设工程合同不适用"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-017",
+      "clause_type": "付款",
+      "name": "计价方式一致性",
+      "condition": {
+        "type": "mutual_exclusion",
+        "terms": [
+          "固定总价",
+          "按实结算"
+        ],
+        "threshold": 2,
+        "reason": "固定总价和按实结算不能同时采用（需两者均出现才触发）"
+      },
+      "severity": "error",
+      "message": "固定总价与按实结算不能同时作为计价方式",
+      "category": "合同一致性",
+      "source": "《建设工程价款结算暂行办法》第8条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "计价方式一致性通用"
+      },
+      "legal_hierarchy": "dept_rule"
+    },
+    {
+      "id": "cn-018",
+      "clause_type": "违约",
+      "name": "责任条款一致性",
+      "condition": {
+        "type": "mutual_exclusion",
+        "terms": [
+          "无限责任",
+          "责任上限"
+        ],
+        "threshold": 2,
+        "reason": "无限责任和责任上限不能同时存在（需两者均出现才触发）"
+      },
+      "severity": "error",
+      "message": "无限责任与责任上限条款不能同时存在",
+      "category": "合同一致性",
+      "source": "《民法典》合同编",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "责任条款一致性通用"
+      },
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cn-019",
+      "clause_type": "付款",
+      "name": "付款逾期利息上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "付款逾期利息",
+        "context_pattern": "逾期.*利息|逾期.*利率|逾期.*罚息|逾期付款.*日|付款.*逾期|逾期支付.*工程款|逾期.*违约金.*日|日万分之.*逾期",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 0.05,
+        "legal_ref": "《保障中小企业款项支付条例》"
+      },
+      "severity": "major",
+      "message": "机关/事业单位/大型企业付款逾期利息每日不超过万分之五（0.05%）",
+      "category": "工程款",
+      "source": "国务院",
+      "source_credibility": 1.0,
+      "extraction_method": "structured",
+      "structured_template": "numeric_max_not_exceed",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "通用，所有合同须含付款期限条款"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-022",
+      "clause_type": "争议",
+      "name": "争议解决方式必须明确",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "诉讼",
+          "仲裁",
+          "起诉",
+          "人民法院"
+        ],
+        "message_if_missing": "争议解决条款缺少诉讼或仲裁方式 —— 应明确约定争议解决方式"
+      },
+      "severity": "fatal",
+      "message": "合同必须明确约定争议解决方式（诉讼或仲裁）",
+      "category": "争议解决",
+      "source": "《民事诉讼法》第24条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cn-023",
+      "clause_type": "争议",
+      "name": "管辖法院必须明确",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "人民法院",
+          "仲裁委员会"
+        ],
+        "message_if_missing": "争议解决条款缺少管辖法院或仲裁机构指定"
+      },
+      "severity": "major",
+      "message": "合同必须明确指定管辖法院或仲裁委员会",
+      "category": "争议解决",
+      "source": "《民事诉讼法》第24条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cn-024",
+      "clause_type": "争议",
+      "name": "协商前置条款",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "协商解决",
+          "协商不成",
+          "协商一致",
+          "协商争议",
+          "协商提起诉讼",
+          "协商仲裁",
+          "友好协商"
+        ],
+        "message_if_missing": "争议解决条款缺少协商前置约定"
+      },
+      "severity": "minor",
+      "message": "合同争议解决建议约定协商前置条款",
+      "category": "争议解决",
+      "source": "合同惯例",
+      "source_credibility": 0.7,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "other",
+      "legal_hierarchy_note": "纯合同起草惯例，协商前置并非法律法规强制要求，无对应法律渊源"
+    },
+    {
+      "id": "cn-025",
+      "clause_type": "付款",
+      "name": "付款节点必须有明确条件",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "竣工验收",
+          "验收合格",
+          "交付",
+          "完成",
+          "结算"
+        ],
+        "message_if_missing": "付款条款缺少明确的付款触发条件"
+      },
+      "severity": "major",
+      "message": "各付款节点必须约定明确的付款条件",
+      "category": "工程款",
+      "source": "GF-2017-0201 第12条",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "scope": {
+        "exclude_contract_types": [
+          "购销合同"
+        ],
+        "note": "付款节点条件（竣工验收等建工特有词），非建设工程合同不适用"
+      },
+      "legal_hierarchy": "industry_standard"
+    },
+    {
+      "id": "cn-026",
+      "clause_type": "付款",
+      "name": "单次付款比例上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "单次付款比例",
+        "context_pattern": "付款至.*%|付至.*%|支付至.*%",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 97,
+        "legal_ref": "建设工程合同惯例（预留至少3%质保金）"
+      },
+      "severity": "major",
+      "message": "单次付款比例不超过97%（预留不少于3%质量保证金）",
+      "category": "工程款",
+      "source": "GF-2017-0201 第12条",
+      "source_credibility": 0.9,
+      "extraction_method": "structured",
+      "structured_template": "numeric_max_not_exceed",
+      "legal_hierarchy": "industry_standard"
+    },
+    {
+      "id": "cn-027",
+      "clause_type": "付款",
+      "name": "付款期限约定",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "付款期限",
+        "context_pattern": "付款|支付|付清|结清|到款|结算",
+        "unit": "日",
+        "accept_units": [
+          "日",
+          "天",
+          "工作日",
+          "月"
+        ],
+        "operator": "<=",
+        "expected": 365,
+        "legal_ref": "GF-2017-0201 第12条"
+      },
+      "severity": "minor",
+      "message": "合同未发现明确的付款期限约定，建议人工确认",
+      "category": "工程款",
+      "source": "GF-2017-0201 第12条",
+      "source_credibility": 0.9,
+      "extraction_method": "structured",
+      "structured_template": "numeric_payment_deadline",
+      "legal_hierarchy": "industry_standard"
+    },
+    {
+      "id": "cn-028",
+      "name": "违约金必须有计算基数",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "合同价款",
+          "合同总价",
+          "工程总价",
+          "结算价款",
+          "未付金额",
+          "逾期金额"
+        ],
+        "message_if_missing": "违约金条款缺少计算基数"
+      },
+      "severity": "minor",
+      "message": "违约金条款中未找到明确的损失计算基数，建议人工确认违约金约定是否具体可执行",
+      "category": "违约条款",
+      "source": "《民法典》第584条",
+      "source_credibility": 0.95,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law",
+      "clause_type": "违约"
+    },
+    {
+      "id": "cn-029",
+      "clause_type": "违约",
+      "name": "违约金总额上限",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "违约金",
+          "违约责任"
+        ],
+        "message_if_missing": "合同未明确约定违约金条款或违约责任"
+      },
+      "severity": "minor",
+      "message": "合同未明确约定违约金条款或违约责任，建议补充相关约定",
+      "category": "违约条款",
+      "source": "《民法典》第585条 + 最高法合同编解释第65条",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cn-030",
+      "clause_type": "保修",
+      "name": "质保期起算点必须明确",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "竣工验收之日",
+          "验收合格之日",
+          "竣工之日起",
+          "验收合格之日起",
+          "工程竣工验收合格",
+          "保修期自",
+          "质保期自",
+          "缺陷责任期自",
+          "起算之日",
+          "起算时间",
+          "竣工验收合格后",
+          "验收通过之日",
+          "竣工合格之日起",
+          "自竣工",
+          "自验收"
+        ],
+        "message_if_missing": "保修期条款缺少明确的起算时间点"
+      },
+      "severity": "minor",
+      "message": "保修期必须明确起算时间点",
+      "category": "保修期限",
+      "source": "国务院令第279号第40条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "scope": {
+        "exclude_contract_types": [
+          "购销合同"
+        ],
+        "note": "质保期起算（竣工验收之日等建工特有概念），非建设工程合同不适用"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-002",
+      "clause_type": "保修",
+      "name": "地下室防水工程保修期限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "地下室防水保修期",
+        "context_pattern": "地下.*防水|地下室.*防渗漏",
+        "unit": "年",
+        "operator": ">=",
+        "expected": 5,
+        "legal_ref": "国务院令第279号第40条(二)"
+      },
+      "severity": "fatal",
+      "message": "有防水要求的地下室最低保修期限为5年",
+      "category": "保修期限",
+      "source": "国务院",
+      "source_credibility": 1.0,
+      "extraction_method": "structured",
+      "structured_template": "numeric_warranty_is",
+      "scope": {
+        "note": "已由 main-contract 包过滤，scope 兜底"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-003",
+      "clause_type": "保修",
+      "name": "主体结构保修期限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "主体结构保修期",
+        "context_pattern": "主体结构|地基基础",
+        "unit": "年",
+        "operator": ">=",
+        "expected": 50,
+        "legal_ref": "国务院令第279号第40条(一)"
+      },
+      "severity": "fatal",
+      "message": "主体结构最低保修期限为设计文件规定的合理使用年限",
+      "category": "保修期限",
+      "source": "国务院",
+      "source_credibility": 1.0,
+      "extraction_method": "structured",
+      "structured_template": "numeric_warranty_is",
+      "scope": {
+        "min_contract_value": 500000,
+        "note": "已由 main-contract 包过滤 + scope 兜底过滤微型合同"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-007",
+      "clause_type": "保修",
+      "name": "缺陷责任期上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "缺陷责任期",
+        "context_pattern": "缺陷责任期|缺陷|责任期",
+        "unit": "月",
+        "accept_units": [
+          "年",
+          "月"
+        ],
+        "operator": "<=",
+        "expected": 24,
+        "legal_ref": "建质[2017]138号第2条"
+      },
+      "severity": "major",
+      "message": "缺陷责任期最长不超过24个月",
+      "category": "工程管理",
+      "source": "住建部",
+      "source_credibility": 0.95,
+      "extraction_method": "structured",
+      "structured_template": "numeric_max_not_exceed",
+      "scope": {
+        "exclude_contract_types": [
+          "购销合同"
+        ],
+        "note": "缺陷责任期是建工特有概念，非建设工程合同不适用"
+      },
+      "legal_hierarchy": "dept_rule"
+    },
+    {
+      "id": "cn-008",
+      "clause_type": "验收",
+      "name": "竣工验收组织期限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "竣工验收组织期限",
+        "context_pattern": "收到.*竣工.*验收.*\\d+天|竣工验收.*\\d+天|自收到.*验收.*\\d+天|组织.*验收.*\\d+天|验收.*\\d+天.*内|发包人.*验收.*\\d+天",
+        "unit": "天",
+        "operator": "<=",
+        "expected": 28,
+        "legal_ref": "GF-2017-0201第13.2.2条"
+      },
+      "severity": "major",
+      "message": "发包人应在收到竣工验收报告后28天内组织验收",
+      "category": "竣工验收",
+      "source": "住建部/工商总局",
+      "source_credibility": 0.9,
+      "extraction_method": "structured",
+      "structured_template": "numeric_max_not_exceed",
+      "scope": {
+        "exclude_contract_types": [
+          "购销合同"
+        ],
+        "note": "竣工验收组织期限是建工特有概念，非建设工程合同不适用"
+      },
+      "legal_hierarchy": "industry_standard"
+    },
+    {
+      "id": "cn-011",
+      "clause_type": "其他",
+      "name": "禁止转包",
+      "condition": {
+        "type": "forbidden_pattern",
+        "terms": [
+          "转包",
+          "转包给第三方",
+          "将工程转包",
+          "分包单位再分包"
+        ],
+        "reason": "禁止承包单位将工程转包或违法分包"
+      },
+      "severity": "error",
+      "message": "承包单位不得将工程转包或将主体结构分包",
+      "category": "工程管理",
+      "source": "《建筑法》第28条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cn-012",
+      "clause_type": "付款",
+      "name": "禁止垫资",
+      "condition": {
+        "type": "forbidden_pattern",
+        "terms": [
+          "垫资",
+          "垫资施工",
+          "垫付全部工程款",
+          "全额垫资",
+          "承包方先行垫付",
+          "垫付所有费用",
+          "须垫付",
+          "垫付"
+        ],
+        "reason": "Tokeniser ngram 切分导致长中文 term 匹配不上，加短 term 垫资作为兜底"
+      },
+      "severity": "error",
+      "message": "发包人不得要求承包方垫付全部工程款",
+      "category": "工程款",
+      "source": "住建部《建筑工程施工发包与承包计价管理办法》第12条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "dept_rule"
+    },
+    {
+      "id": "cn-013",
+      "clause_type": "验收",
+      "name": "质量标准不得低于强制性标准",
+      "condition": {
+        "type": "forbidden_pattern",
+        "terms": [
+          "降低标准",
+          "降低质量标准",
+          "降低工程标准",
+          "降低工程质量",
+          "违反强制性标准",
+          "低于国家强制性标准",
+          "低于强制性标准",
+          "不执行国家标准",
+          "不执行强制性标准",
+          "质量标准低于"
+        ],
+        "reason": "合同约定的质量标准不得低于国家强制性标准"
+      },
+      "severity": "error",
+      "message": "合同约定的质量标准不得低于国家工程建设强制性标准",
+      "category": "质量标准",
+      "source": "《建设工程质量管理条例》第10条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-015",
+      "clause_type": "验收",
+      "name": "必须包含竣工验收条款",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "竣工验收",
+          "验收合格",
+          "组织验收",
+          "竣工验收报告",
+          "验收程序",
+          "验收标准"
+        ],
+        "message_if_missing": "合同缺少竣工验收条款"
+      },
+      "severity": "error",
+      "message": "合同必须包含竣工验收条款",
+      "category": "竣工验收",
+      "source": "《建设工程质量管理条例》第16条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "scope": {
+        "exclude_contract_types": [
+          "购销合同"
+        ],
+        "note": "竣工验收是建工特有要求，非建设工程合同不适用"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-016",
+      "clause_type": "安全",
+      "name": "必须包含安全生产条款",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "安全生产",
+          "安全施工",
+          "安全教育",
+          "三级安全教育"
+        ],
+        "message_if_missing": "合同缺少安全生产条款"
+      },
+      "severity": "error",
+      "message": "合同必须包含安全生产责任条款",
+      "category": "安全生产",
+      "source": "《建设工程安全生产管理条例》第21条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual_curated",
+      "scope": {
+        "exclude_contract_types": [
+          "购销合同"
+        ],
+        "note": "安全生产是建工特有要求，非建设工程合同不适用"
+      },
+      "legal_hierarchy": "admin_regulation"
+    },
+    {
+      "id": "cn-020",
+      "clause_type": "付款",
+      "name": "履约担保比例上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "履约担保比例",
+        "context_pattern": "履约担保|履约保函|履约保证金|担保.*金额|担保.*比例",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 10,
+        "legal_ref": "《招标投标法实施条例》"
+      },
+      "severity": "major",
+      "message": "履约担保金额不超过中标合同金额的 10%",
+      "category": "工程款",
+      "source": "国务院",
+      "source_credibility": 1.0,
+      "extraction_method": "structured",
+      "structured_template": "numeric_max_not_exceed",
+      "scope": {
+        "contract_types": [
+          "大型工程",
+          "总承包工程"
+        ],
+        "exclude_contract_types": [
+          "小型维修",
+          "屋面防水工程"
+        ],
+        "min_contract_value": 0,
+        "note": "适用于招标发包的大型工程"
+      },
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cn-021",
+      "clause_type": "付款",
+      "name": "投标保证金上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "投标保证金比例",
+        "context_pattern": "投标保证金|投标担保|投标.*保证金",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 2,
+        "legal_ref": "《招标投标法实施条例》"
+      },
+      "severity": "major",
+      "message": "投标保证金不超过估算价的 2% 且不超过 80 万元",
+      "category": "工程款",
+      "source": "国务院",
+      "source_credibility": 1.0,
+      "extraction_method": "structured",
+      "structured_template": "numeric_max_not_exceed",
+      "scope": {
+        "contract_types": [
+          "大型工程",
+          "总承包工程"
+        ],
+        "exclude_contract_types": [
+          "小型维修",
+          "屋面防水工程"
+        ],
+        "min_contract_value": 0,
+        "note": "适用于招标发包的大型工程"
+      },
+      "legal_hierarchy": "law"
+    }
+  ]
+}

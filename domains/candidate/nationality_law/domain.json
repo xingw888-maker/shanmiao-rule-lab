@@ -1,0 +1,23 @@
+{
+  "id": "candidate/nationality_law",
+  "name": "国籍法",
+  "version": "0.1.0",
+  "description": "Nationality law compliance validation — candidate domain.",
+  "maintainer": "shanmiao-lab",
+  "disclaimer": "Candidate domain. Not validated. Research/education only.",
+  "predicate_whitelist": [
+    "MUST_BE_GE",
+    "MUST_BE_LE",
+    "MUST_BE_GT",
+    "MUST_BE_LT",
+    "IMPLIES",
+    "MUTUALLY_EXCLUSIVE_WITH",
+    "FORBIDS",
+    "REQUIRES",
+    "LOGICAL_CHAIN",
+    "SCOPED_TO"
+  ],
+  "files": {
+    "rules_package": "rules.json"
+  }
+}

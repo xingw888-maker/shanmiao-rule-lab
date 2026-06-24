@@ -1,0 +1,1880 @@
+[
+  {
+    "id": "immigration_law-001",
+    "name": "临时入境的期限",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "临时入境的期限",
+      "context_pattern": "期限",
+      "unit": "日",
+      "operator": "<=",
+      "expected": 15.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 临时入境的期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-002",
+    "name": "## 第四章 外国人停留居留### 第一节 停留居留**第二十九条** 外国人所持签证注明的停留期限",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "## 第四章 外国人停留居留### 第一节 停留居留**第二十九条** 外国人所持签证注明的停留期限",
+      "context_pattern": "期限",
+      "unit": "日",
+      "operator": "<=",
+      "expected": 180.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: ## 第四章 外国人停留居留### 第一节 停留居留**第二十九条** 外国人所持签证注明的停留期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-003",
+    "name": "拘留审查的期限",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "拘留审查的期限",
+      "context_pattern": "期限",
+      "unit": "日",
+      "operator": "<=",
+      "expected": 30.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 拘留审查的期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-004",
+    "name": "限制活动范围的期限",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "限制活动范围的期限",
+      "context_pattern": "期限",
+      "unit": "日",
+      "operator": "<=",
+      "expected": 60.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 限制活动范围的期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-005",
+    "name": "口岸签证机关签发的签证一次入境有效",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "口岸签证机关签发的签证一次入境有效",
+      "context_pattern": "期限",
+      "unit": "日",
+      "operator": "<=",
+      "expected": 30.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 口岸签证机关签发的签证一次入境有效",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-006",
+    "name": "签证注明的停留期限",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过三十日"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过三十日"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 签证注明的停留期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-007",
+    "name": "临时入境的期限",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过十五日"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过十五日"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 临时入境的期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-008",
+    "name": "延长签证停留期限",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过签证原注明的停留期限"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过签证原注明的停留期限"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 延长签证停留期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-009",
+    "name": "拘留审查的期限",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过三十日"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过三十日"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 拘留审查的期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-010",
+    "name": "限制活动范围的期限",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超过六十日"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超过六十日"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 限制活动范围的期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-011",
+    "name": "情节严重的",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "情节严重的",
+      "context_pattern": "情节严重的",
+      "unit": "元",
+      "operator": "<=",
+      "expected": 10000.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 情节严重的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-012",
+    "name": "对个人处每非法介绍一人五千元",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "对个人处每非法介绍一人五千元",
+      "context_pattern": "对个人处每非法介绍一",
+      "unit": "元",
+      "operator": "<=",
+      "expected": 50000.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 对个人处每非法介绍一人五千元",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-013",
+    "name": "对单位处每非法介绍一人五千元",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "对单位处每非法介绍一人五千元",
+      "context_pattern": "对单位处每非法介绍一",
+      "unit": "元",
+      "operator": "<=",
+      "expected": 10010.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 对单位处每非法介绍一人五千元",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-014",
+    "name": "非法聘用外国人的",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "非法聘用外国人的",
+      "context_pattern": "非法聘用外国人的",
+      "unit": "元",
+      "operator": "<=",
+      "expected": 10010.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 非法聘用外国人的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-015",
+    "name": "在中国境内的外国人应当遵守中国法律",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "危害中国国家安全",
+        "损害社会公共利益",
+        "破坏社会公共秩序"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 危害中国国家安全, 损害社会公共利益, 破坏社会公共秩序"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 在中国境内的外国人应当遵守中国法律",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "安全生产",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-016",
+    "name": "出入境边防检查机关可以对出境入境交通运输工具载运的货物实施边防检查",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "海关"
+      ],
+      "message_if_missing": "合同缺少出入境边防检查机关可以对出境入境交通运输工具载运的货物实施边防检查条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 出入境边防检查机关可以对出境入境交通运输工具载运的货物实施边防检查",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-017",
+    "name": "申请人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "驻外签证机关的要求提供"
+      ],
+      "message_if_missing": "合同缺少申请人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 申请人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-018",
+    "name": "（三）因",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "抗力或者其他紧急原因需要临时入境的"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 抗力或者其他紧急原因需要临时入境的"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: （三）因",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-019",
+    "name": "外国人等待返回期间",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "离开限定的区域"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 离开限定的区域"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 外国人等待返回期间",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-020",
+    "name": "或者具有需要办理外国人停留证件其他情形的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定办理外国人停留证件"
+      ],
+      "message_if_missing": "合同缺少或者具有需要办理外国人停留证件其他情形的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 或者具有需要办理外国人停留证件其他情形的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-021",
+    "name": "所持的普通签证、停留居留证件损毁、遗失、被盗抢或者有符合国家规定的事由需要换发、补发的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定向停留居留地县级",
+        "上地方人民政府公安机关出入境管理机构提出申请"
+      ],
+      "message_if_missing": "合同缺少所持的普通签证、停留居留证件损毁、遗失、被盗抢或者有符合国家规定的事由需要换发、补发的条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 所持的普通签证、停留居留证件损毁、遗失、被盗抢或者有符合国家规定的事由需要换发、补发的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-022",
+    "name": "**第三十七条** 外国人在中国境内停留居留",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "从事",
+        "停留居留事由不相符的活动"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 从事, 停留居留事由不相符的活动"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第三十七条** 外国人在中国境内停留居留",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-023",
+    "name": "**第三十九条** 外国人在中国境内旅馆住宿的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "旅馆业治安管理的有关规定为其办理住宿登记"
+      ],
+      "message_if_missing": "合同缺少**第三十九条** 外国人在中国境内旅馆住宿的条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第三十九条** 外国人在中国境内旅馆住宿的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-024",
+    "name": "其家属、监护人或者代理人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定"
+      ],
+      "message_if_missing": "合同缺少其家属、监护人或者代理人条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 其家属、监护人或者代理人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-025",
+    "name": "**第四十一条** 外国人在中国境内工作",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定取得工作许可",
+        "工作类居留证件"
+      ],
+      "message_if_missing": "合同缺少**第四十一条** 外国人在中国境内工作条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第四十一条** 外国人在中国境内工作",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-026",
+    "name": "任何单位和个人",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "聘用未取得工作许可",
+        "工作类居留证件的外国人"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 聘用未取得工作许可, 工作类居留证件的外国人"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 任何单位和个人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-027",
+    "name": "未经批准",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "进入限制外国人进入的区域"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 进入限制外国人进入的区域"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 未经批准",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-028",
+    "name": "**第四十五条** 聘用外国人工作或者招收外国留学生的单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定向所在地公安机关报告有关信息"
+      ],
+      "message_if_missing": "合同缺少**第四十五条** 聘用外国人工作或者招收外国留学生的单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第四十五条** 聘用外国人工作或者招收外国留学生的单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-029",
+    "name": "未经出入境边防检查机关按照规定程序许可",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "上下人员",
+        "装卸货物或者物品"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 上下人员, 装卸货物或者物品"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 未经出入境边防检查机关按照规定程序许可",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-030",
+    "name": "**第五十一条** 交通运输工具负责人或者交通运输工具出境入境业务代理单位",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定提前向出入境边防检查机关报告入境",
+        "出境的交通运输工具抵达",
+        "离开口岸的时间",
+        "停留地点"
+      ],
+      "message_if_missing": "合同缺少**第五十一条** 交通运输工具负责人或者交通运输工具出境入境业务代理单位条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第五十一条** 交通运输工具负责人或者交通运输工具出境入境业务代理单位",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-031",
+    "name": "交通运输工具负责人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "载离"
+      ],
+      "message_if_missing": "合同缺少交通运输工具负责人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 交通运输工具负责人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-032",
+    "name": "**第五十五条** 外国船舶、航空器在中国境内",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定的路线",
+        "航线行驶"
+      ],
+      "message_if_missing": "合同缺少**第五十五条** 外国船舶、航空器在中国境内条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第五十五条** 外国船舶、航空器在中国境内",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-033",
+    "name": "出境入境的船舶、航空器",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "驶入对外开放口岸",
+        "外地区"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 驶入对外开放口岸, 外地区"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 出境入境的船舶、航空器",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-034",
+    "name": "因不可预见的紧急情况或者",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "抗力驶入的"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 抗力驶入的"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 因不可预见的紧急情况或者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-035",
+    "name": "被限制活动范围的外国人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "要求接受审查"
+      ],
+      "message_if_missing": "合同缺少被限制活动范围的外国人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 被限制活动范围的外国人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-036",
+    "name": "未经公安机关批准",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "离开限定的区域"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 离开限定的区域"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 未经公安机关批准",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-037",
+    "name": "决定机关",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定",
+        "时通知出入境边防检查机关"
+      ],
+      "message_if_missing": "合同缺少决定机关条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 决定机关",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-038",
+    "name": "**第九十二条** 外国人申请办理签证、外国人停留居留证件等出境入境证件或者申请办理证件延期、变更的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定缴纳签证费",
+        "证件费"
+      ],
+      "message_if_missing": "合同缺少**第九十二条** 外国人申请办理签证、外国人停留居留证件等出境入境证件或者申请办理证件延期、变更的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第九十二条** 外国人申请办理签证、外国人停留居留证件等出境入境证件或者申请办理证件延期、变更的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-039",
+    "name": "在中国境内的外国人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "中国法律"
+      ],
+      "message_if_missing": "合同缺少在中国境内的外国人条款——《建设工程安全生产管理条例》要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 在中国境内的外国人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "安全生产",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-040",
+    "name": "**第十九条** 外国人申请办理签证需要提供中国境内的单位或者个人出具的邀请函件的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "驻外签证机关的要求提供"
+      ],
+      "message_if_missing": "合同缺少**第十九条** 外国人申请办理签证需要提供中国境内的单位或者个人出具的邀请函件的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第十九条** 外国人申请办理签证需要提供中国境内的单位或者个人出具的邀请函件的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-041",
+    "name": "**第六十五条** 对依法决定不准出境或者不准入境的人员",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定",
+        "时通知出入境边防检查机关"
+      ],
+      "message_if_missing": "合同缺少**第六十五条** 对依法决定不准出境或者不准入境的人员条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第六十五条** 对依法决定不准出境或者不准入境的人员",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-042",
+    "name": "**第四条** 公安部、外交部按照各自职责",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "有关出境入境事务的管理"
+      ],
+      "message_if_missing": "合同缺少**第四条** 公安部、外交部按照各自职责条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第四条** 公安部、外交部按照各自职责",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-043",
+    "name": "中华人民共和国驻外使馆、领馆或者外交部委托的其他驻外机构（以下称驻外签证机关）",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "在境外签发外国人入境签证"
+      ],
+      "message_if_missing": "合同缺少中华人民共和国驻外使馆、领馆或者外交部委托的其他驻外机构（以下称驻外签证机关）条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 中华人民共和国驻外使馆、领馆或者外交部委托的其他驻外机构（以下称驻外签证机关）",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-044",
+    "name": "出入境边防检查机关",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "实施出境入境边防检查"
+      ],
+      "message_if_missing": "合同缺少出入境边防检查机关条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 出入境边防检查机关",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-045",
+    "name": "县级以上地方人民政府公安机关及其出入境管理机构",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "外国人停留居留管理"
+      ],
+      "message_if_missing": "合同缺少县级以上地方人民政府公安机关及其出入境管理机构条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 县级以上地方人民政府公安机关及其出入境管理机构",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-046",
+    "name": "出入境边防检查机关可以要求外国人本人、载运其入境的交通运输工具的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人或者交通运输工具出境入境业务代理单位提供必要的保证措施"
+      ],
+      "message_if_missing": "合同缺少出入境边防检查机关可以要求外国人本人、载运其入境的交通运输工具的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 出入境边防检查机关可以要求外国人本人、载运其入境的交通运输工具的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-047",
+    "name": "入境之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "三十日内"
+      ],
+      "message_if_missing": "合同缺少入境之日条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 入境之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-048",
+    "name": "收到申请材料之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十五日内进行审查并作出审查决定"
+      ],
+      "message_if_missing": "合同缺少收到申请材料之日条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到申请材料之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-049",
+    "name": "外国人工作类居留证件的有效期最短",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "外国人工作类居留证件的有效期最短",
+      "context_pattern": "外国人工作类居留证件",
+      "unit": "日",
+      "operator": ">=",
+      "expected": 90.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 外国人工作类居留证件的有效期最短",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-050",
+    "name": "，最长",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "，最长",
+      "context_pattern": "，最长",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 5.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: ，最长",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-051",
+    "name": "非工作类居留证件的有效期最短",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "非工作类居留证件的有效期最短",
+      "context_pattern": "非工作类居留证件的有",
+      "unit": "日",
+      "operator": ">=",
+      "expected": 180.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 非工作类居留证件的有效期最短",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-052",
+    "name": "登记事项发生变更之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十日内向居留地县级",
+        "上地方人民政府公安机关出入境管理机构申请办理变更"
+      ],
+      "message_if_missing": "合同缺少登记事项发生变更之日条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 登记事项发生变更之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-053",
+    "name": "外国人停留证件的有效期最长",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "外国人停留证件的有效期最长",
+      "context_pattern": "外国人停留证件的有效",
+      "unit": "日",
+      "operator": ">=",
+      "expected": 180.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 外国人停留证件的有效期最长",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-054",
+    "name": "**第五十一条** 交通运输工具",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人或者交通运输工具出境入境业务代理单位应当按照规定提前向出入境边防检查机关报告入境",
+        "出境的交通运输工具抵达",
+        "离开口岸的时"
+      ],
+      "message_if_missing": "合同缺少**第五十一条** 交通运输工具条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第五十一条** 交通运输工具",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-055",
+    "name": "**第五十二条** 交通运输工具",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人",
+        "交通运输工具出境入境业务代理单位应当配合出境入境边防检查"
+      ],
+      "message_if_missing": "合同缺少**第五十二条** 交通运输工具条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第五十二条** 交通运输工具",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-056",
+    "name": "交通运输工具负责人应当",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "载离"
+      ],
+      "message_if_missing": "合同缺少交通运输工具负责人应当条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 交通运输工具负责人应当",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-057",
+    "name": "查清其国籍、身份之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "计算"
+      ],
+      "message_if_missing": "合同缺少查清其国籍、身份之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 查清其国籍、身份之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-058",
+    "name": "被遣送出境之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "一至五年内不准入境"
+      ],
+      "message_if_missing": "合同缺少被遣送出境之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 被遣送出境之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-059",
+    "name": "并对其直接",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "的主管人员",
+        "其他直接责任人员依照前款规定予",
+        "处罚"
+      ],
+      "message_if_missing": "合同缺少并对其直接条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 并对其直接",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-060",
+    "name": "并责令其",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "所邀请外国人的出境费用"
+      ],
+      "message_if_missing": "合同缺少并责令其条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 并责令其",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-061",
+    "name": "对其直接",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "的主管人员",
+        "其他直接责任人员依照前款规定予",
+        "处罚"
+      ],
+      "message_if_missing": "合同缺少对其直接条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 对其直接",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-062",
+    "name": "其被遣返之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "六个月至三年",
+        "内不予签发出境入境证件"
+      ],
+      "message_if_missing": "合同缺少其被遣返之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 其被遣返之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-063",
+    "name": "被驱逐出境之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十年内不准入境"
+      ],
+      "message_if_missing": "合同缺少被驱逐出境之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 被驱逐出境之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-064",
+    "name": "对其",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人处五千元",
+        "上五万元",
+        "下罚款：（一）未经查验准许擅自出境入境或者未经批准擅自改变出境入境口岸的"
+      ],
+      "message_if_missing": "合同缺少对其条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 对其",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-065",
+    "name": "交通运输工具",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人证明其已经采取合理预防措施的"
+      ],
+      "message_if_missing": "合同缺少交通运输工具条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 交通运输工具",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-066",
+    "name": "收到处罚决定书之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十五日内"
+      ],
+      "message_if_missing": "合同缺少收到处罚决定书之日条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到处罚决定书之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-067",
+    "name": "2013 年 7 月 1 日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "施行"
+      ],
+      "message_if_missing": "合同缺少2013 年 7 月 1 日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 2013 年 7 月 1 日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-068",
+    "name": "# 中华人民共和国出境入境管理法-",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "# 中华人民共和国出境入境管理法-",
+      "context_pattern": "安全",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2012.0,
+      "legal_ref": "国务院令第279号第40条(四)"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: # 中华人民共和国出境入境管理法-",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-069",
+    "name": "制定机关：全国人民代表大会- 生效日期：",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "制定机关：全国人民代表大会- 生效日期：",
+      "context_pattern": "安全",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2013.0,
+      "legal_ref": "国务院令第279号第40条(四)"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 制定机关：全国人民代表大会- 生效日期：",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "验收",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  },
+  {
+    "id": "immigration_law-070",
+    "name": "**第九十三条** 本法自",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "**第九十三条** 本法自",
+      "context_pattern": "**第九十三条** ",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2013.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: **第九十三条** 本法自",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "immigration_law"
+  }
+]

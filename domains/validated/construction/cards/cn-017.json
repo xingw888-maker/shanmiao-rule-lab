@@ -1,0 +1,67 @@
+{
+  "id": "cn-017",
+  "name": "计价方式一致性",
+  "version": "1.0.0",
+  "domain": "construction",
+  "layer": "L0_VALIDATED",
+
+  "source": {
+    "legal_ref": "《建设工程价款结算暂行办法》第8条",
+    "authority": "财政部、建设部",
+    "credibility": 1.0,
+    "extraction": "manual",
+    "date_effective": "2004-10-20",
+    "last_reviewed": "2026-06-18"
+  },
+
+  "logic": {
+    "condition_type": "mutual_exclusion",
+    "params": {
+      "terms": ["固定总价", "按实结算"],
+      "threshold": 2,
+      "reason": "固定总价和按实结算不能同时采用，需两者均出现才触发"
+    },
+    "formal_predicate": "count(matched_terms in ['固定总价','按实结算']) < 2",
+    "rule_kind": "consistency",
+    "scope_anchor": "global"
+  },
+
+  "scope": {
+    "applies_to": ["施工总承包", "专业分包"],
+    "not_applies_to": ["成本加酬金合同", "单价合同"],
+    "min_contract": 0,
+    "contract_types": ["施工总承包合同", "专业分包合同", "建设工程合同"],
+    "trigger_condition": "合同中同时出现固定总价和按实结算两种计价方式表述"
+  },
+
+  "verification": {
+    "should_pass": {
+      "text": "本合同采用固定总价方式计价，合同总价为人民币五百万元整。",
+      "expected": "PASSED"
+    },
+    "should_fail": {
+      "text": "本合同采用固定总价方式计价。结算时按实际工程量按实结算。",
+      "expected": "FAILED"
+    },
+    "should_not_apply": {
+      "text": "本合同为设备采购合同，采购价款为一百万元，交货后三十日内一次性付清。",
+      "expected": "PASSED"
+    },
+    "should_not_false_positive": {
+      "text": "本合同仅约定单价为每平方米五百元，最终结算按实际完成量计算。",
+      "expected": "PASSED"
+    }
+  },
+
+  "boundaries": {
+    "checks": "合同中是否同时出现固定总价和按实结算两种互斥计价方式。若两者均出现则 FAILED。threshold=2 避免单关键词误报。",
+    "does_not_check": "不在检查计价方式是单价合同还是总价合同的明确声明。不在检查变更签证的计价规则是否和主合同一致。不在检查固定总价加设计变更可调价的半开口合同是否规范。不在检查计价货币和汇率条款。",
+    "known_limitations": "仅做术语层面的互斥检测，不判断实质计价方式。半开口合同不在规则范围但可能误报。threshold=2 已排除单关键词误匹配。"
+  },
+
+  "evidence": {
+    "on_pass": "合同中未同时出现固定总价和按实结算两种计价方式，计价方式一致",
+    "on_fail": "合同同时出现固定总价和按实结算条款，两种计价方式互斥，违反《建设工程价款结算暂行办法》第8条",
+    "on_na": "合同中未出现固定总价或按实结算相关计价术语，本规则不适用"
+  }
+}

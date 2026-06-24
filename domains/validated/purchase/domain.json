@@ -1,0 +1,25 @@
+{
+  "id": "purchase",
+  "name": "Purchase and Sales Contract Compliance",
+  "version": "1.0.0",
+  "description": "Chinese purchase and sales contract compliance validation, self-bootstrapped from Civil Code and sample contracts.",
+  "maintainer": "shanmiao-lab",
+  "disclaimer": "This domain is for research/education demonstration only. Not legal advice.",
+  "predicate_whitelist": [
+    "MUST_BE_GE",
+    "MUST_BE_LE",
+    "FORBIDS",
+    "REQUIRES"
+  ],
+  "files": {
+    "ontology": "ontology.json",
+    "rules_package": "rules.json"
+  },
+  "contract_classification": {
+    "note": "Fallback classification.",
+    "threshold": {
+      "min_confidence": 0.5,
+      "max_second_confidence": 0.3
+    }
+  }
+}

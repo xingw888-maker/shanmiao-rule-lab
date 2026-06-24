@@ -1,0 +1,24 @@
+{
+  "id": "nda",
+  "name": "保密协议 (NDA)",
+  "version": "1.0.0",
+  "description": "Chinese Non-Disclosure Agreement compliance validation — the first domain built from scratch to demonstrate domain-agnostic engine capability.",
+  "maintainer": "shanmiao-lab",
+  "disclaimer": "Research/education demonstration only. Not legal advice.",
+  "predicate_whitelist": [
+    "MUST_BE_GE",
+    "MUST_BE_LE",
+    "FORBIDS",
+    "REQUIRES"
+  ],
+  "files": {
+    "rules_package": "rules.json"
+  },
+  "contract_classification": {
+    "note": "Keyword-based: confidentiality/NDA terminology.",
+    "threshold": {
+      "min_confidence": 0.5,
+      "max_second_confidence": 0.3
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "_description": "跨域通用术语映射表 — 一个概念有多个表面形式。供 extraction + handler term expansion 消费。不替代 rules.json 的 terms。",
+  "compensation": {
+    "canonical": "劳动报酬",
+    "surfaces": ["工资", "薪水", "报酬", "月薪", "薪资", "薪酬", "工钱"],
+    "domains": ["labor_law", "civil_code"]
+  },
+  "liquidated_damages": {
+    "canonical": "违约金",
+    "surfaces": ["违约金", "罚金", "违约罚则", "逾期违约金", "违约赔偿金"],
+    "domains": ["construction", "civil_code"]
+  },
+  "warranty_document": {
+    "canonical": "质量保修书",
+    "surfaces": ["质量保修书", "保修书", "工程质量保修书"],
+    "domains": ["construction"]
+  },
+  "confidentiality_period": {
+    "canonical": "保密期限",
+    "surfaces": ["保密期限", "保密期", "保密义务期限", "保密义务期间"],
+    "domains": ["nda"]
+  },
+  "defect_liability": {
+    "canonical": "缺陷责任期",
+    "surfaces": ["缺陷责任期", "缺陷责任期限", "质保期", "保修责任期"],
+    "domains": ["construction"]
+  },
+  "retention_money": {
+    "canonical": "质量保证金",
+    "surfaces": ["质量保证金", "质保金", "保修金", "保修款", "质量保函"],
+    "domains": ["construction"]
+  },
+  "force_majeure": {
+    "canonical": "不可抗力",
+    "surfaces": ["不可抗力", "天灾", "自然灾害", "不可抗力事件", "不可抗力因素"],
+    "domains": ["construction", "civil_code", "purchase"]
+  },
+  "termination": {
+    "canonical": "合同解除",
+    "surfaces": ["解除合同", "合同终止", "终止合同", "解除", "废止"],
+    "domains": ["construction", "civil_code", "labor_law", "nda"]
+  }
+}

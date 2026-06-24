@@ -1,0 +1,353 @@
+{
+  "id": "nda-rules",
+  "name": "NDA Compliance Rules",
+  "version": "1.0.0",
+  "description": "15 cross-domain NDA (保密协议) compliance rules covering confidentiality period, liquidated damages, recipient obligations, scope, and exceptions.",
+  "domain": "nda",
+  "rules": [
+    {
+      "id": "nda-001",
+      "clause_type": "保密",
+      "name": "保密期限不少于1年",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "保密期限",
+        "context_pattern": "保密期[限间]|保密义务期[限间]|保密.*?(年|月|日)|信息.*保密",
+        "unit": "年",
+        "accept_units": [
+          "年",
+          "月"
+        ],
+        "operator": ">=",
+        "expected": 1,
+        "legal_ref": "《反不正当竞争法》第9条"
+      },
+      "severity": "major",
+      "message": "保密期限应明确约定且不少于1年",
+      "category": "保密期限",
+      "source": "法律",
+      "source_credibility": 0.9,
+      "extraction_method": "manual",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "nda-002",
+      "clause_type": "保密",
+      "name": "保密期限不超过20年",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "保密期限上限",
+        "context_pattern": "永久.*保密|无限期.*保密|终身.*保密|保密.*永久|保密.*无限期",
+        "unit": "年",
+        "operator": "<=",
+        "expected": 20,
+        "legal_ref": "《民法典》合同编 合理期限原则"
+      },
+      "severity": "minor",
+      "message": "保密期限不宜约定为永久或无限期，建议明确合理期限",
+      "category": "保密期限",
+      "source": "合同法理",
+      "source_credibility": 0.7,
+      "extraction_method": "manual",
+      "legal_hierarchy": "other"
+    },
+    {
+      "id": "nda-003",
+      "clause_type": "违约",
+      "name": "保密违约金不超过合同金额30%",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "违约金上限",
+        "context_pattern": "违约金|违约.*赔偿|违约.*责任",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 30,
+        "legal_ref": "《民法典》第585条"
+      },
+      "severity": "major",
+      "message": "违约金约定不得超过造成损失的30%",
+      "category": "违约条款",
+      "source": "《民法典》第585条",
+      "source_credibility": 0.9,
+      "extraction_method": "manual",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "nda-004",
+      "clause_type": "保密",
+      "name": "必须明确保密信息定义",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "保密信息",
+          "商业秘密",
+          "专有信息",
+          "机密信息",
+          "非公开信息"
+        ],
+        "message_if_missing": "合同未定义保密信息的范围"
+      },
+      "severity": "fatal",
+      "message": "保密协议缺少保密信息的定义条款，协议可能无法执行",
+      "category": "合同完整性",
+      "source": "法律",
+      "source_credibility": 0.95,
+      "extraction_method": "manual",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "nda-005",
+      "clause_type": "保密",
+      "name": "接收方保密义务必须明确",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "保密义务",
+          "不得泄露",
+          "予以保密",
+          "采取保密",
+          "承担保密",
+          "不向",
+          "披露"
+        ],
+        "message_if_missing": "合同未明确接收方的保密义务"
+      },
+      "severity": "fatal",
+      "message": "保密协议缺少接收方的具体保密义务条款",
+      "category": "合同完整性",
+      "source": "法律",
+      "source_credibility": 0.95,
+      "extraction_method": "manual",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "nda-006",
+      "clause_type": "保密",
+      "name": "禁止反向工程条款",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "反向工程",
+          "逆向工程",
+          "反编译",
+          "反汇编"
+        ],
+        "message_if_missing": "建议加入禁止反向工程条款（如适用）"
+      },
+      "severity": "minor",
+      "message": "对于涉及技术信息的NDA，建议增加禁止反向工程条款",
+      "category": "合同优化",
+      "source": "行业惯例",
+      "source_credibility": 0.6,
+      "extraction_method": "manual",
+      "legal_hierarchy": "other"
+    },
+    {
+      "id": "nda-007",
+      "clause_type": "保密",
+      "name": "必须包含保密例外条款",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "已公开",
+          "例外",
+          "除外",
+          "独立开发",
+          "法律要求",
+          "监管要求",
+          "法院要求",
+          "公众知晓"
+        ],
+        "message_if_missing": "合同缺少保密义务的例外条款"
+      },
+      "severity": "major",
+      "message": "保密协议应包含例外条款（已公开信息、独立开发、法律要求等）",
+      "category": "合同完整性",
+      "source": "行业惯例",
+      "source_credibility": 0.85,
+      "extraction_method": "manual",
+      "legal_hierarchy": "other"
+    },
+    {
+      "id": "nda-008",
+      "clause_type": "保密",
+      "name": "合同终止后保密义务存续",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "终止后",
+          "存续",
+          "继续有效",
+          "届满后"
+        ],
+        "message_if_missing": "建议明确保密义务在合同终止后继续有效"
+      },
+      "severity": "minor",
+      "message": "建议在合同中明确保密义务于合同终止后的存续期间",
+      "category": "合同优化",
+      "source": "行业惯例",
+      "source_credibility": 0.7,
+      "extraction_method": "manual",
+      "legal_hierarchy": "other"
+    },
+    {
+      "id": "nda-009",
+      "clause_type": "争议",
+      "name": "争议解决方式必须明确",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "诉讼",
+          "仲裁",
+          "起诉",
+          "人民法院",
+          "仲裁委员会"
+        ],
+        "message_if_missing": "合同缺少争议解决方式条款"
+      },
+      "severity": "major",
+      "message": "合同未明确约定争议解决方式",
+      "category": "合同完整性",
+      "source": "《民法典》",
+      "source_credibility": 0.9,
+      "extraction_method": "manual",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "nda-010",
+      "clause_type": "争议",
+      "name": "管辖法院必须明确",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "人民法院",
+          "仲裁委员会"
+        ],
+        "message_if_missing": "合同缺少管辖法院或仲裁机构约定"
+      },
+      "severity": "major",
+      "message": "合同未明确管辖法院或仲裁机构",
+      "category": "合同完整性",
+      "source": "《民事诉讼法》",
+      "source_credibility": 0.9,
+      "extraction_method": "manual",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "nda-011",
+      "clause_type": "保密",
+      "name": "禁止超出约定目的使用保密信息",
+      "condition": {
+        "type": "forbidden_pattern",
+        "terms": [
+          "任意使用",
+          "随意使用",
+          "其他目的",
+          "他用",
+          "挪作他用",
+          "超范围使用"
+        ],
+        "reason": "保密信息的使用应严格限制在约定的目的范围内"
+      },
+      "severity": "major",
+      "message": "合同应禁止接收方超出约定目的使用保密信息",
+      "category": "使用限制",
+      "source": "行业惯例",
+      "source_credibility": 0.8,
+      "extraction_method": "manual",
+      "legal_hierarchy": "other"
+    },
+    {
+      "id": "nda-012",
+      "clause_type": "保密",
+      "name": "合同终止后信息返还或销毁",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "返还",
+          "归还",
+          "销毁",
+          "删除",
+          "交还"
+        ],
+        "message_if_missing": "建议增加合同终止后保密信息的返还或销毁条款"
+      },
+      "severity": "minor",
+      "message": "建议约定合同终止后接收方应返还或销毁保密信息",
+      "category": "合同完整性",
+      "source": "行业惯例",
+      "source_credibility": 0.8,
+      "extraction_method": "manual",
+      "legal_hierarchy": "other"
+    },
+    {
+      "id": "nda-013",
+      "clause_type": "违约",
+      "name": "违约金必须有计算基数",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "合同金额",
+          "实际损失",
+          "计算基数"
+        ],
+        "message_if_missing": "违约金条款缺少计算基数"
+      },
+      "severity": "minor",
+      "message": "违约金条款中未找到明确的计算基数，建议明确",
+      "category": "违约条款",
+      "source": "《民法典》第585条",
+      "source_credibility": 0.9,
+      "extraction_method": "manual",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "nda-014",
+      "clause_type": "违约",
+      "name": "违约金不显著超过可能损失",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "违约金绝对额",
+        "context_pattern": "违约金.*元|违约.*赔偿.*元|违约金.*人民币|违约金.*万元",
+        "unit": "元",
+        "accept_units": [
+          "元",
+          "万元"
+        ],
+        "operator": "<=",
+        "expected": 5000000,
+        "legal_ref": "《民法典》第585条 违约金过高的司法调整"
+      },
+      "severity": "minor",
+      "message": "违约金绝对额过高（超过500万元）可能被法院酌情调减",
+      "category": "违约条款",
+      "source": "《民法典》第585条",
+      "source_credibility": 0.8,
+      "extraction_method": "manual",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "nda-015",
+      "clause_type": "其他",
+      "name": "合同必须有签署栏",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "盖章",
+          "签字",
+          "签章",
+          "授权代表",
+          "法定代表人"
+        ],
+        "message_if_missing": "合同缺少签署栏，无法确认双方签章"
+      },
+      "severity": "major",
+      "message": "合同末尾缺少甲乙双方签章栏",
+      "category": "合同完整性",
+      "source": "《民法典》第490条",
+      "source_credibility": 0.95,
+      "extraction_method": "manual",
+      "legal_hierarchy": "law"
+    }
+  ]
+}

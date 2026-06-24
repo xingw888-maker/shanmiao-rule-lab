@@ -1,0 +1,3775 @@
+[
+  {
+    "id": "civil_procedure-001",
+    "name": "在一定期限内不得起诉的案件",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "起诉的期限内起诉的"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 起诉的期限内起诉的"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 在一定期限内不得起诉的案件",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-002",
+    "name": "公示催告的期间",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "公示催告的期间",
+      "context_pattern": "公示催告的期间",
+      "unit": "日",
+      "operator": ">=",
+      "expected": 60.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 公示催告的期间",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-003",
+    "name": "纠纷的当事人可以书面协议选择被告住所地、合同履行地、合同签订地、原告住所地、标的物所在地等与争议有实际联系的地点的人民法",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "违反本法对级别管辖",
+        "专属管辖的规定"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 违反本法对级别管辖, 专属管辖的规定"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 纠纷的当事人可以书面协议选择被告住所地、合同履行地、合同签订地、原告住所地、标的物所在地等与争议有实际联系的地点的人民法",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-004",
+    "name": "应当报请上级人民法院指定管辖",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "再自行移送"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 再自行移送"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 应当报请上级人民法院指定管辖",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-005",
+    "name": "原审人民法院",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "第一审程序另行组成合议庭"
+      ],
+      "message_if_missing": "合同缺少原审人民法院条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 原审人民法院",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-006",
+    "name": "**第四十二条** 人民法院审理下列民事案件",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "由审判员一人独任审理：（一）涉",
+        "国家利益",
+        "社会公共利益的案件"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 由审判员一人独任审理：（一）涉, 国家利益, 社会公共利益的案件"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第四十二条** 人民法院审理下列民事案件",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-007",
+    "name": "审判人员",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "接受当事人",
+        "其诉讼代理人请客送礼"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 接受当事人, 其诉讼代理人请客送礼"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 审判人员",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-008",
+    "name": "人民法院",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "法定程序"
+      ],
+      "message_if_missing": "合同缺少人民法院条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人民法院",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-009",
+    "name": "确定当事人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "的证据",
+        "其期限"
+      ],
+      "message_if_missing": "合同缺少确定当事人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 确定当事人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-010",
+    "name": "**第六十九条** 人民法院收到当事人提交的证据材料",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "收据"
+      ],
+      "message_if_missing": "合同缺少**第六十九条** 人民法院收到当事人提交的证据材料条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第六十九条** 人民法院收到当事人提交的证据材料",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-011",
+    "name": "有关单位和个人",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "拒绝"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 拒绝"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 有关单位和个人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-012",
+    "name": "需要在法庭出示的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "在公开开庭时出示"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 在公开开庭时出示"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 需要在法庭出示的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-013",
+    "name": "（三）因自然灾害等",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "抗力不能出庭的"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 抗力不能出庭的"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: （三）因自然灾害等",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-014",
+    "name": "鉴定人拒不出庭作证的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "作为认定事实的根据"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 作为认定事实的根据"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 鉴定人拒不出庭作证的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-015",
+    "name": "**第八十六条** 当事人因",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "抗拒的事由或者其他正当理由耽误期限的"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 抗拒的事由或者其他正当理由耽误期限的"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第八十六条** 当事人因",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-016",
+    "name": "必须双方自愿",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "强迫"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 强迫"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 必须双方自愿",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-017",
+    "name": "调解协议的内容",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "违反法律规定"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 违反法律规定"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 调解协议的内容",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-018",
+    "name": "其作出一定行为",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "其作出一定行为"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 其作出一定行为"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 其作出一定行为",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-019",
+    "name": "可以裁定对其财产进行保全、责令其作出一定行为或者",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "其作出一定行为"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 其作出一定行为"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 可以裁定对其财产进行保全、责令其作出一定行为或者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-020",
+    "name": "申请人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "担保"
+      ],
+      "message_if_missing": "合同缺少申请人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 申请人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-021",
+    "name": "财产已被查封、冻结的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "重复查封",
+        "冻结"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 重复查封, 冻结"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 财产已被查封、冻结的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-022",
+    "name": "### 第十一章 诉讼费用**第一百二十一条** 当事人进行民事诉讼",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "规定交纳案件受理费"
+      ],
+      "message_if_missing": "合同缺少### 第十一章 诉讼费用**第一百二十一条** 当事人进行民事诉讼条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: ### 第十一章 诉讼费用**第一百二十一条** 当事人进行民事诉讼",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-023",
+    "name": "双方当事人达成书面仲裁协议申请仲裁、",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "向人民法院起诉的"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 向人民法院起诉的"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 双方当事人达成书面仲裁协议申请仲裁、",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-024",
+    "name": "必须告知当事人在判决发生法律效力前",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "另行结婚"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 另行结婚"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 必须告知当事人在判决发生法律效力前",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-025",
+    "name": "（四）一方当事人因",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "抗拒的事由"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 抗拒的事由"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: （四）一方当事人因",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-026",
+    "name": "也没有",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "义务的人的"
+      ],
+      "message_if_missing": "合同缺少也没有条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 也没有",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-027",
+    "name": "第二审人民法院",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "再次发回重审"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 再次发回重审"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 第二审人民法院",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-028",
+    "name": "经有关机关证明该公民",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "能生存"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 能生存"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 经有关机关证明该公民",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-029",
+    "name": "**第二百零九条** 当事人对已经发生法律效力的解除婚姻关系的判决、调解书",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "申请再审"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 申请再审"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第二百零九条** 当事人对已经发生法律效力的解除婚姻关系的判决、调解书",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-030",
+    "name": "当事人",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "再次向人民检察院申请检察建议或者抗诉"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 再次向人民检察院申请检察建议或者抗诉"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 当事人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-031",
+    "name": "人民法院再审时",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人民检察院派员出席法庭"
+      ],
+      "message_if_missing": "合同缺少人民法院再审时条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人民法院再审时",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-032",
+    "name": "由人民法院根据情况决定",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "少于六十日"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 少于六十日"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 由人民法院根据情况决定",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-033",
+    "name": "必须在十五日内开始执行",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "拒绝"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 拒绝"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 必须在十五日内开始执行",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-034",
+    "name": "人民法院查询、扣押、冻结、划拨、变价的财产",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "超出被执行人应当履行义务的范围"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 超出被执行人应当履行义务的范围"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人民法院查询、扣押、冻结、划拨、变价的财产",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-035",
+    "name": "人民法院查询、扣押、冻结、划拨、变价的财产不得超出被执行人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "义务的范围"
+      ],
+      "message_if_missing": "合同缺少人民法院查询、扣押、冻结、划拨、变价的财产不得超出被执行人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人民法院查询、扣押、冻结、划拨、变价的财产不得超出被执行人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-036",
+    "name": "人民法院有权扣留、提取被执行人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "义务部分的收入"
+      ],
+      "message_if_missing": "合同缺少人民法院有权扣留、提取被执行人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人民法院有权扣留、提取被执行人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-037",
+    "name": "人民法院有权查封、扣押、冻结、拍卖、变卖被执行人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "义务部分的财产"
+      ],
+      "message_if_missing": "合同缺少人民法院有权查封、扣押、冻结、拍卖、变卖被执行人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人民法院有权查封、扣押、冻结、拍卖、变卖被执行人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-038",
+    "name": "被执行人是公民的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "被执行人或者他的成年家属到场"
+      ],
+      "message_if_missing": "合同缺少被执行人是公民的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 被执行人是公民的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-039",
+    "name": "被执行人是法人或者其他组织的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "其法定代表人或者主要负责人到场"
+      ],
+      "message_if_missing": "合同缺少被执行人是法人或者其他组织的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 被执行人是法人或者其他组织的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-040",
+    "name": "自由买卖的物品",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "自由买卖的物品"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 自由买卖的物品"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 自由买卖的物品",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-041",
+    "name": "国家",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "自由买卖的物品"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 自由买卖的物品"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 国家",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-042",
+    "name": "被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "迟延履行金"
+      ],
+      "message_if_missing": "合同缺少被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-043",
+    "name": "提交中华人民共和国涉外仲裁机构或者其他仲裁机构仲裁的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "向人民法院起诉"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 向人民法院起诉"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 提交中华人民共和国涉外仲裁机构或者其他仲裁机构仲裁的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-044",
+    "name": "**第二百八十条** 经中华人民共和国涉外仲裁机构裁决的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "向人民法院起诉"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 向人民法院起诉"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第二百八十条** 经中华人民共和国涉外仲裁机构裁决的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-045",
+    "name": "外国驻中华人民共和国的使领馆可以向该国公民送达文书和调查取证",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "违反中华人民共",
+        "国的法律"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 违反中华人民共, 国的法律"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 外国驻中华人民共和国的使领馆可以向该国公民送达文书和调查取证",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-046",
+    "name": "但不得违反中华人民共和国的法律",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "采取强制措施"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 采取强制措施"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 但不得违反中华人民共和国的法律",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-047",
+    "name": "任何外国机关或者个人",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "在中华人民共",
+        "国领域内送达文书",
+        "调查取证"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 在中华人民共, 国领域内送达文书, 调查取证"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 任何外国机关或者个人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-048",
+    "name": "但请求采用的特殊方式",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "违反中华人民共",
+        "国法律"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 违反中华人民共, 国法律"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 但请求采用的特殊方式",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-049",
+    "name": "件](#第五节-认定财产无主案件)    - [第六节 确认调解协议案件](#第六节-确认调解协议案件)    - [第",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "案件](#第七节-实现担保物权案件)  - [第十六章 审判监督程序](#第十六章-审判监督程序)  - [第十七章 督"
+      ],
+      "message_if_missing": "合同缺少件](#第五节-认定财产无主案件)    - [第六节 确认调解协议案件](#第六节-确认调解协议案件)    - [第条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 件](#第五节-认定财产无主案件)    - [第六节 确认调解协议案件](#第六节-确认调解协议案件)    - [第",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-050",
+    "name": "**第四条** 凡在中华人民共和国领域内进行民事诉讼",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "本法"
+      ],
+      "message_if_missing": "合同缺少**第四条** 凡在中华人民共和国领域内进行民事诉讼条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第四条** 凡在中华人民共和国领域内进行民事诉讼",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-051",
+    "name": "产权益纠纷的当事人可以书面协议选择被告住所地、合同履行地、合同签订地、原告住所地、标的物所在地等与争议有实际联系的地点的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "违反本法对级别管辖",
+        "专属管辖的规定"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 违反本法对级别管辖, 专属管辖的规定"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 产权益纠纷的当事人可以书面协议选择被告住所地、合同履行地、合同签订地、原告住所地、标的物所在地等与争议有实际联系的地点的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-052",
+    "name": "**第六十八条** 当事人对自己提出的主张",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "证据"
+      ],
+      "message_if_missing": "合同缺少**第六十八条** 当事人对自己提出的主张条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第六十八条** 当事人对自己提出的主张",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-053",
+    "name": "**第七十条** 人民法院有权向有关单位和个人调查取证",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "拒绝"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 拒绝"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第七十条** 人民法院有权向有关单位和个人调查取证",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-054",
+    "name": "人民法院对专门性问题认为需要鉴定的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "资格的鉴定人进行鉴定"
+      ],
+      "message_if_missing": "合同缺少人民法院对专门性问题认为需要鉴定的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人民法院对专门性问题认为需要鉴定的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-055",
+    "name": "**第九十九条** 调解达成协议",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "强迫"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 强迫"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第九十九条** 调解达成协议",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-056",
+    "name": "**第一百一十条** 人民法院裁定先予执行的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "下列条件：（一）当事人之间权利义务关系明确"
+      ],
+      "message_if_missing": "合同缺少**第一百一十条** 人民法院裁定先予执行的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第一百一十条** 人民法院裁定先予执行的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-057",
+    "name": "**第一百一十三条** 诉讼参与人和其他人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "法庭规则"
+      ],
+      "message_if_missing": "合同缺少**第一百一十三条** 诉讼参与人和其他人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第一百一十三条** 诉讼参与人和其他人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-058",
+    "name": "## 第二编 审判程序### 第十二章 第一审普通程序#### 第一节 起诉和受理**第一百二十二条** 起诉必",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "下列条件：（一）原告是",
+        "本案有直接利害关系的公民",
+        "法人",
+        "其他组织"
+      ],
+      "message_if_missing": "合同缺少## 第二编 审判程序### 第十二章 第一审普通程序#### 第一节 起诉和受理**第一百二十二条** 起诉必条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: ## 第二编 审判程序### 第十二章 第一审普通程序#### 第一节 起诉和受理**第一百二十二条** 起诉必",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-059",
+    "name": "（六）依照法律规定",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "起诉的案件"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 起诉的案件"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: （六）依照法律规定",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-060",
+    "name": "委托调查",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "的项目",
+        "要求"
+      ],
+      "message_if_missing": "合同缺少委托调查条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 委托调查",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-061",
+    "name": "当事人提起上诉的",
+    "condition": {
+      "type": "forbidden_pattern",
+      "terms": [
+        "再次发回重审"
+      ],
+      "reason": "Auto-extracted forbidden term(s): 再次发回重审"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 当事人提起上诉的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-062",
+    "name": "理选民资格案件、宣告失踪或者宣告死亡案件、认定公民无民事行为能力或者限制民事行为能力案件、认定财产无主案件、确认调解协议",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "案件"
+      ],
+      "message_if_missing": "合同缺少理选民资格案件、宣告失踪或者宣告死亡案件、认定公民无民事行为能力或者限制民事行为能力案件、认定财产无主案件、确认调解协议条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 理选民资格案件、宣告失踪或者宣告死亡案件、认定公民无民事行为能力或者限制民事行为能力案件、认定财产无主案件、确认调解协议",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-063",
+    "name": "#### 第七节 实现担保物权案件**第二百零三条** 申请实现担保物权",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人",
+        "其他有权请求实现担保物权的人依照民法典等法律"
+      ],
+      "message_if_missing": "合同缺少#### 第七节 实现担保物权案件**第二百零三条** 申请实现担保物权条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: #### 第七节 实现担保物权案件**第二百零三条** 申请实现担保物权",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-064",
+    "name": "向担保财产所在地或者",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "登记地基层人民法院提出"
+      ],
+      "message_if_missing": "合同缺少向担保财产所在地或者条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 向担保财产所在地或者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-065",
+    "name": "执行完毕后",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "情况制作笔录"
+      ],
+      "message_if_missing": "合同缺少执行完毕后条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 执行完毕后",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-066",
+    "name": "在三十日内如果还未执行完毕",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "情况函告委托人民法院"
+      ],
+      "message_if_missing": "合同缺少在三十日内如果还未执行完毕条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 在三十日内如果还未执行完毕",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-067",
+    "name": "**第二百四十七条** 执行员接到申请执行书或者移交执行书",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人发出执行通知"
+      ],
+      "message_if_missing": "合同缺少**第二百四十七条** 执行员接到申请执行书或者移交执行书条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第二百四十七条** 执行员接到申请执行书或者移交执行书",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-068",
+    "name": "**第二百五十四条** 财产被查封、扣押后",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人在指定期间履行法律文书确定的义务"
+      ],
+      "message_if_missing": "合同缺少**第二百五十四条** 财产被查封、扣押后条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第二百五十四条** 财产被查封、扣押后",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-069",
+    "name": "执行员",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "情况记入笔录"
+      ],
+      "message_if_missing": "合同缺少执行员条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 执行员",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-070",
+    "name": "（五）人民法院认为",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "的其他情形"
+      ],
+      "message_if_missing": "合同缺少（五）人民法院认为条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: （五）人民法院认为",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-071",
+    "name": "（六）人民法院认为",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "的其他情形"
+      ],
+      "message_if_missing": "合同缺少（六）人民法院认为条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: （六）人民法院认为",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-072",
+    "name": "**第二百六十八条** 对享有外交特权与豁免的外国人、外国组织或者国际组织提起的民事诉讼",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "中华人民共",
+        "国有关法律",
+        "中华人民共",
+        "国缔结或者参加的国际条约的规定办理"
+      ],
+      "message_if_missing": "合同缺少**第二百六十八条** 对享有外交特权与豁免的外国人、外国组织或者国际组织提起的民事诉讼条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第二百六十八条** 对享有外交特权与豁免的外国人、外国组织或者国际组织提起的民事诉讼",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-073",
+    "name": "**第二百八十四条** 请求和提供司法协助",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "中华人民共",
+        "国缔结或者参加的国际条约所规定的途径进行"
+      ],
+      "message_if_missing": "合同缺少**第二百八十四条** 请求和提供司法协助条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第二百八十四条** 请求和提供司法协助",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-074",
+    "name": "应当由当事人直接向被执行人住所地或者其财产所在地的中级人民法院申请",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "中华人民共",
+        "国缔结或者参加的国际条约"
+      ],
+      "message_if_missing": "合同缺少应当由当事人直接向被执行人住所地或者其财产所在地的中级人民法院申请条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 应当由当事人直接向被执行人住所地或者其财产所在地的中级人民法院申请",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-075",
+    "name": "当事人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "进行辩论"
+      ],
+      "message_if_missing": "合同缺少当事人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 当事人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-076",
+    "name": "**第十四条** 人民检察院",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "对民事诉讼实行法律监督"
+      ],
+      "message_if_missing": "合同缺少**第十四条** 人民检察院条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第十四条** 人民检察院",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-077",
+    "name": "**第三十九条** 上级人民法院",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "审理下级人民法院管辖的第一审民事案件"
+      ],
+      "message_if_missing": "合同缺少**第三十九条** 上级人民法院条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第三十九条** 上级人民法院",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-078",
+    "name": "**第五十二条** 当事人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "委托代理人"
+      ],
+      "message_if_missing": "合同缺少**第五十二条** 当事人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第五十二条** 当事人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-079",
+    "name": "被告可以承认或者反驳诉讼请求",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "提起反诉"
+      ],
+      "message_if_missing": "合同缺少被告可以承认或者反驳诉讼请求条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 被告可以承认或者反驳诉讼请求",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-080",
+    "name": "第三人认为有独立请求权的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "提起诉讼"
+      ],
+      "message_if_missing": "合同缺少第三人认为有独立请求权的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 第三人认为有独立请求权的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-081",
+    "name": "提起反诉或者上诉",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "委托人的特别授权"
+      ],
+      "message_if_missing": "合同缺少提起反诉或者上诉条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 提起反诉或者上诉",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-082",
+    "name": "**第六十四条** 代理诉讼的律师和其他诉讼代理人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "调查收集证据"
+      ],
+      "message_if_missing": "合同缺少**第六十四条** 代理诉讼的律师和其他诉讼代理人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第六十四条** 代理诉讼的律师和其他诉讼代理人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-083",
+    "name": "**第七十条** 人民法院",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "向有关单位",
+        "个人调查取证"
+      ],
+      "message_if_missing": "合同缺少**第七十条** 人民法院条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第七十条** 人民法院",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-084",
+    "name": "**第八十条** 鉴定人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "了解进行鉴定所需要的案件材料"
+      ],
+      "message_if_missing": "合同缺少**第八十条** 鉴定人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第八十条** 鉴定人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-085",
+    "name": "#### 第二节 送达**第八十七条** 送达诉讼文书必",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "送达回证"
+      ],
+      "message_if_missing": "合同缺少#### 第二节 送达**第八十七条** 送达诉讼文书必条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: #### 第二节 送达**第八十七条** 送达诉讼文书必",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-086",
+    "name": "拘留的期限",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "拘留的期限",
+      "context_pattern": "期限",
+      "unit": "日",
+      "operator": ">=",
+      "expected": 15.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 拘留的期限",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-087",
+    "name": "当事人和其他诉讼参与人认为对自己的陈述记录有遗漏或者差错的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "申请补正"
+      ],
+      "message_if_missing": "合同缺少当事人和其他诉讼参与人认为对自己的陈述记录有遗漏或者差错的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 当事人和其他诉讼参与人认为对自己的陈述记录有遗漏或者差错的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-088",
+    "name": "### 第十四章 第二审程序**第一百七十一条** 当事人不服地方人民法院第一审判决的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "在判决书送达之日起十五日内向上一级人民法院提起上诉"
+      ],
+      "message_if_missing": "合同缺少### 第十四章 第二审程序**第一百七十一条** 当事人不服地方人民法院第一审判决的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: ### 第十四章 第二审程序**第一百七十一条** 当事人不服地方人民法院第一审判决的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-089",
+    "name": "当事人不服地方人民法院第一审裁定的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "在裁定书送达之日起十日内向上一级人民法院提起上诉"
+      ],
+      "message_if_missing": "合同缺少当事人不服地方人民法院第一审裁定的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 当事人不服地方人民法院第一审裁定的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-090",
+    "name": "由担保物权人以及其他",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "请求实现担保物权的人依照民法典等法律"
+      ],
+      "message_if_missing": "合同缺少由担保物权人以及其他条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 由担保物权人以及其他",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-091",
+    "name": "发现确有错误的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "提审或者指令下级人民法院再审"
+      ],
+      "message_if_missing": "合同缺少发现确有错误的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 发现确有错误的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-092",
+    "name": "各级人民检察院对审判监督程序以外的其他审判程序中审判人员的违法行为",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "向同级人民法院提出检察建议"
+      ],
+      "message_if_missing": "合同缺少各级人民检察院对审判监督程序以外的其他审判程序中审判人员的违法行为条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 各级人民检察院对审判监督程序以外的其他审判程序中审判人员的违法行为",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-093",
+    "name": "**第二百四十二条** 人民检察院",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "对民事执行活动实行法律监督"
+      ],
+      "message_if_missing": "合同缺少**第二百四十二条** 人民检察院条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: **第二百四十二条** 人民检察院",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-094",
+    "name": "（四）向受送达人委托的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "代其接受送达的诉讼代理人送达"
+      ],
+      "message_if_missing": "合同缺少（四）向受送达人委托的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: （四）向受送达人委托的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-095",
+    "name": "（五）向受送达人在中华人民共和国领域内设立的代表机构或者",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "接受送达的分支机构",
+        "业务代办人送达"
+      ],
+      "message_if_missing": "合同缺少（五）向受送达人在中华人民共和国领域内设立的代表机构或者条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: （五）向受送达人在中华人民共和国领域内设立的代表机构或者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-096",
+    "name": "不服第一审人民法院判决、裁定的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "在判决书",
+        "裁定书送达之日起三十日内提起上诉"
+      ],
+      "message_if_missing": "合同缺少不服第一审人民法院判决、裁定的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 不服第一审人民法院判决、裁定的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-097",
+    "name": "人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人",
+        "其所扶养家属的生活必需费用"
+      ],
+      "message_if_missing": "合同缺少人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-098",
+    "name": "2022 年 1 月 1 日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "施行"
+      ],
+      "message_if_missing": "合同缺少2022 年 1 月 1 日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 2022 年 1 月 1 日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-099",
+    "name": "其他组织由其主要",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人进行诉讼"
+      ],
+      "message_if_missing": "合同缺少其他组织由其主要条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 其他组织由其主要",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-100",
+    "name": "人民法院判决",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "民事责任的第三人"
+      ],
+      "message_if_missing": "合同缺少人民法院判决条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人民法院判决",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "工程管理",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-101",
+    "name": "知道或者应当知道其民事权益受到损害之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "六个月内"
+      ],
+      "message_if_missing": "合同缺少知道或者应当知道其民事权益受到损害之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 知道或者应当知道其民事权益受到损害之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-102",
+    "name": "有关单位的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人应当支持证人作证"
+      ],
+      "message_if_missing": "合同缺少有关单位的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 有关单位的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-103",
+    "name": "应当由法人的法定代表人、其他组织的主要负责人或者该法人、组织",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "收件的人签收"
+      ],
+      "message_if_missing": "合同缺少应当由法人的法定代表人、其他组织的主要负责人或者该法人、组织条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 应当由法人的法定代表人、其他组织的主要负责人或者该法人、组织",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-104",
+    "name": "法人或者其他组织的",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "收件的人"
+      ],
+      "message_if_missing": "合同缺少法人或者其他组织的条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 法人或者其他组织的",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-105",
+    "name": "发出公告之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "经过三十日"
+      ],
+      "message_if_missing": "合同缺少发出公告之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 发出公告之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-106",
+    "name": "可以对其主要",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人或者直接责任人员予",
+        "罚款",
+        "拘留"
+      ],
+      "message_if_missing": "合同缺少可以对其主要条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 可以对其主要",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-107",
+    "name": "法人或者其他组织的名称、住所和法定代表人或者主要",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人的姓名",
+        "职务",
+        "联系方式"
+      ],
+      "message_if_missing": "合同缺少法人或者其他组织的名称、住所和法定代表人或者主要条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 法人或者其他组织的名称、住所和法定代表人或者主要",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-108",
+    "name": "也没有应当",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "义务的人的"
+      ],
+      "message_if_missing": "合同缺少也没有应当条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 也没有应当",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-109",
+    "name": "法人的名称及其法定代表人的姓名或者其他组织的名称及其主要",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人的姓名"
+      ],
+      "message_if_missing": "合同缺少法人的名称及其法定代表人的姓名或者其他组织的名称及其主要条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 法人的名称及其法定代表人的姓名或者其他组织的名称及其主要",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-110",
+    "name": "宣告失踪的公告期间",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "宣告失踪的公告期间",
+      "context_pattern": "宣告失踪的公告期间",
+      "unit": "月",
+      "operator": ">=",
+      "expected": 3.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 宣告失踪的公告期间",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-111",
+    "name": "，宣告死亡的公告期间",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "，宣告死亡的公告期间",
+      "context_pattern": "，宣告死亡的公告期间",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 1.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: ，宣告死亡的公告期间",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-112",
+    "name": "因意外事件下落不明，经有关机关证明该公民不可能生存的，宣告死亡的公告期间",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "因意外事件下落不明，经有关机关证明该公民不可能生存的，宣告死亡的公告期间",
+      "context_pattern": "因意外事件下落不明，",
+      "unit": "月",
+      "operator": ">=",
+      "expected": 3.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 因意外事件下落不明，经有关机关证明该公民不可能生存的，宣告死亡的公告期间",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-113",
+    "name": "调解协议生效之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "三十日内"
+      ],
+      "message_if_missing": "合同缺少调解协议生效之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 调解协议生效之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-114",
+    "name": "收到再审申请书之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "五日内将再审申请书副本发送对方当事人"
+      ],
+      "message_if_missing": "合同缺少收到再审申请书之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到再审申请书之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-115",
+    "name": "收到再审申请书副本之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十五日内提交书面意见"
+      ],
+      "message_if_missing": "合同缺少收到再审申请书副本之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到再审申请书副本之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-116",
+    "name": "知道或者应当知道之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "六个月内提出"
+      ],
+      "message_if_missing": "合同缺少知道或者应当知道之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 知道或者应当知道之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-117",
+    "name": "收到抗诉书之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "三十日内作出再审的裁定"
+      ],
+      "message_if_missing": "合同缺少收到抗诉书之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到抗诉书之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-118",
+    "name": "收到支付令之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十五日内清偿债务"
+      ],
+      "message_if_missing": "合同缺少收到支付令之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到支付令之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-119",
+    "name": "判决公告之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "申请人有权向支付人请求支付"
+      ],
+      "message_if_missing": "合同缺少判决公告之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 判决公告之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "付款",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-120",
+    "name": "知道或者应当知道判决公告之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "一年内"
+      ],
+      "message_if_missing": "合同缺少知道或者应当知道判决公告之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 知道或者应当知道判决公告之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-121",
+    "name": "可以向",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "执行的人民法院提出书面异议"
+      ],
+      "message_if_missing": "合同缺少可以向条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 可以向",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-122",
+    "name": "收到书面异议之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十五日内审查"
+      ],
+      "message_if_missing": "合同缺少收到书面异议之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到书面异议之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-123",
+    "name": "裁定送达之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十日内向上一级人民法院申请复议"
+      ],
+      "message_if_missing": "合同缺少裁定送达之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 裁定送达之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-124",
+    "name": "收到申请执行书之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "超过六个月未执行的"
+      ],
+      "message_if_missing": "合同缺少收到申请执行书之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到申请执行书之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-125",
+    "name": "裁定送达之日起十五日内向人民法院提",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "诉讼"
+      ],
+      "message_if_missing": "合同缺少裁定送达之日起十五日内向人民法院提条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 裁定送达之日起十五日内向人民法院提",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-126",
+    "name": "收到委托函件之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "十五日内不执行的"
+      ],
+      "message_if_missing": "合同缺少收到委托函件之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 收到委托函件之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-127",
+    "name": "**第二百四十六条** 申请执行的期间",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "**第二百四十六条** 申请执行的期间",
+      "context_pattern": "**第二百四十六条*",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: **第二百四十六条** 申请执行的期间",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-128",
+    "name": "人民法院可以根据情节轻重对被执行人或者其法定代理人、有关单位的主要",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人或者直接责任人员予",
+        "罚款",
+        "拘留"
+      ],
+      "message_if_missing": "合同缺少人民法院可以根据情节轻重对被执行人或者其法定代理人、有关单位的主要条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 人民法院可以根据情节轻重对被执行人或者其法定代理人、有关单位的主要",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "违约",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-129",
+    "name": "应当通知其法定代表人或者主要",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人到场"
+      ],
+      "message_if_missing": "合同缺少应当通知其法定代表人或者主要条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 应当通知其法定代表人或者主要",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-130",
+    "name": "执行员可以指定被执行人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "保管"
+      ],
+      "message_if_missing": "合同缺少执行员可以指定被执行人条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 执行员可以指定被执行人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-131",
+    "name": "需要等待继承人继承权利或者",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "义务的"
+      ],
+      "message_if_missing": "合同缺少需要等待继承人继承权利或者条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 需要等待继承人继承权利或者",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-132",
+    "name": "又无义务",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "人的"
+      ],
+      "message_if_missing": "合同缺少又无义务条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 又无义务",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-133",
+    "name": "然资源合同发生纠纷提",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "的诉讼"
+      ],
+      "message_if_missing": "合同缺少然资源合同发生纠纷提条款——国务院令第279号第40条(四)要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 然资源合同发生纠纷提",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-134",
+    "name": "邮寄之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "满三个月"
+      ],
+      "message_if_missing": "合同缺少邮寄之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 邮寄之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-135",
+    "name": "公告之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "满三个月"
+      ],
+      "message_if_missing": "合同缺少公告之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 公告之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-136",
+    "name": "或者由于其他不属于被申请人",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "的原因未能陈述意见的"
+      ],
+      "message_if_missing": "合同缺少或者由于其他不属于被申请人条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 或者由于其他不属于被申请人",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-137",
+    "name": "公布之日",
+    "condition": {
+      "type": "required_pattern",
+      "terms": [
+        "施行"
+      ],
+      "message_if_missing": "合同缺少公布之日条款——Auto-extracted from authority source要求包含此内容"
+    },
+    "severity": "warning",
+    "message": "Auto-extracted: 公布之日",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "合同一致性",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-138",
+    "name": "# 中华人民共和国民事诉讼法>-",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "# 中华人民共和国民事诉讼法>-",
+      "context_pattern": "# 中华人民共和国民",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 1991.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: # 中华人民共和国民事诉讼法>-",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-139",
+    "name": "全国人民代表大会第四次会议通过>- 根据",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "全国人民代表大会第四次会议通过>- 根据",
+      "context_pattern": "全国人民代表大会第四",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2007.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 全国人民代表大会第四次会议通过>- 根据",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-140",
+    "name": "民事诉讼法〉的决定》第一次修正>- 根据",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "民事诉讼法〉的决定》第一次修正>- 根据",
+      "context_pattern": "民事诉讼法〉的决定》",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2012.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 民事诉讼法〉的决定》第一次修正>- 根据",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-141",
+    "name": "民事诉讼法〉的决定》第二次修正>- 根据",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "民事诉讼法〉的决定》第二次修正>- 根据",
+      "context_pattern": "民事诉讼法〉的决定》",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2017.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 民事诉讼法〉的决定》第二次修正>- 根据",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-142",
+    "name": "和国行政诉讼法〉的决定》第三次修正）>-",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "和国行政诉讼法〉的决定》第三次修正）>-",
+      "context_pattern": "和国行政诉讼法〉的决",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2021.0,
+      "legal_ref": "Auto-extracted from authority source"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 和国行政诉讼法〉的决定》第三次修正）>-",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  },
+  {
+    "id": "civil_procedure-143",
+    "name": "表大会常务委员会</br>> 生效日期：",
+    "condition": {
+      "type": "numeric_comparison",
+      "label": "表大会常务委员会</br>> 生效日期：",
+      "context_pattern": "表大会常务委员会</",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 2022.0,
+      "legal_ref": "国务院令第279号第40条(四)"
+    },
+    "severity": "major",
+    "message": "Auto-extracted: 表大会常务委员会</br>> 生效日期：",
+    "category": "auto-extracted",
+    "source": "auto-extracted",
+    "source_credibility": 0.7,
+    "extraction_method": "template_extract",
+    "clause_type": "其他",
+    "layer": "L1_CONJECTURE",
+    "scope": {
+      "contract_types": [],
+      "exclude_contract_types": [],
+      "min_contract_value": 0,
+      "note": "Auto-validated rule candidate"
+    },
+    "domain": "civil_procedure"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "id": "foundation",
+  "name": "跨域通用规则",
+  "version": "1.0.0",
+  "description": "Domain-agnostic contract compliance rules — foundation layer shared across all domains.",
+  "maintainer": "shanmiao-lab",
+  "disclaimer": "Research/education demonstration only. Not legal advice.",
+  "predicate_whitelist": [
+    "MUST_BE_GE",
+    "MUST_BE_LE",
+    "FORBIDS",
+    "REQUIRES",
+    "MUTUALLY_EXCLUSIVE_WITH"
+  ],
+  "files": {
+    "rules_package": "rules.json"
+  },
+  "contract_classification": {
+    "note": "Foundation domain is not classified — it supplements domain-specific rules.",
+    "threshold": {
+      "min_confidence": 0.0,
+      "max_second_confidence": 1.0
+    }
+  }
+}

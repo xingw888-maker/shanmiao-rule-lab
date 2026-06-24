@@ -1,0 +1,416 @@
+[
+    {
+        "sample_id":  "cn-001-POS-01",
+        "rule_id":  "cn-001",
+        "text":  "屋面防水工程、有防水要求的卫生间、房间和外墙面的防渗漏，保修期为五年。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "屋面防水保修5年，满足\u003e=5年要求"
+    },
+    {
+        "sample_id":  "cn-001-NEG-01",
+        "rule_id":  "cn-001",
+        "text":  "屋面防水工程保修期限为三年，自竣工验收合格之日起计算。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "屋面防水保修3年\u003c5年法定最低"
+    },
+    {
+        "sample_id":  "cn-001-FP-01",
+        "rule_id":  "cn-001",
+        "text":  "屋面防水材料进场后应进行抽样复试，合格后方可使用。防水卷材采用金星牌3厚SBS改性沥青防水卷材。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含屋面防水触发词但无保修年限数值"
+    },
+    {
+        "sample_id":  "cn-002-POS-01",
+        "rule_id":  "cn-002",
+        "text":  "地下室防水工程保修期为五年，自工程竣工验收合格之日起计算。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "地下室防水保修5年，满足\u003e=5年"
+    },
+    {
+        "sample_id":  "cn-002-NEG-01",
+        "rule_id":  "cn-002",
+        "text":  "地下室防渗漏工程保修期限为三年。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "地下室防水保修3年\u003c5年"
+    },
+    {
+        "sample_id":  "cn-002-FP-01",
+        "rule_id":  "cn-002",
+        "text":  "地下室防水施工应严格按照设计图纸和施工规范执行，防水层搭接宽度不小于100mm。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含地下室防水触发词但无保修年限"
+    },
+    {
+        "sample_id":  "cn-003-POS-01",
+        "rule_id":  "cn-003",
+        "text":  "主体结构保修期为50年。地基基础工程保修期为设计文件规定的合理使用年限。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "主体结构保修50年满足\u003e=50年"
+    },
+    {
+        "sample_id":  "cn-003-POS-02",
+        "rule_id":  "cn-003",
+        "text":  "主体结构工程保修期为设计文件规定的合理使用年限。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "合理使用年限在法律上等同于\u003e=50年"
+    },
+    {
+        "sample_id":  "cn-003-NEG-01",
+        "rule_id":  "cn-003",
+        "text":  "主体结构保修期限为30年，自竣工验收合格之日起计算。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "主体结构保修30年\u003c50年法定最低"
+    },
+    {
+        "sample_id":  "cn-003-FP-01",
+        "rule_id":  "cn-003",
+        "text":  "主体结构施工质量应符合国家现行施工质量验收规范的要求。承包人对主体结构施工质量承担终身责任。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含主体结构触发词但无保修年限数值"
+    },
+    {
+        "sample_id":  "cn-004-POS-01",
+        "rule_id":  "cn-004",
+        "text":  "电气管线工程保修期为2年。设备安装工程保修期为2年。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "电气管线保修2年，满足\u003e=2年"
+    },
+    {
+        "sample_id":  "cn-004-NEG-01",
+        "rule_id":  "cn-004",
+        "text":  "电气管线安装工程保修期限为一年，自验收合格之日起计算。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "电气管线保修1年\u003c2年"
+    },
+    {
+        "sample_id":  "cn-004-FP-01",
+        "rule_id":  "cn-004",
+        "text":  "电气管线安装应符合GB50303-2023建筑电气工程施工质量验收规范的要求，管线敷设应横平竖直。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含电气管线安装触发词但无保修年限"
+    },
+    {
+        "sample_id":  "cn-005-POS-01",
+        "rule_id":  "cn-005",
+        "text":  "给排水管道工程保修期为2年。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "给排水管道保修2年，满足\u003e=2年"
+    },
+    {
+        "sample_id":  "cn-005-NEG-01",
+        "rule_id":  "cn-005",
+        "text":  "给排水管道保修期限为一年，保修期内免费维修。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "给排水管道保修1年\u003c2年"
+    },
+    {
+        "sample_id":  "cn-005-FP-01",
+        "rule_id":  "cn-005",
+        "text":  "给排水管道采用PPR聚丙烯管材，管径DN15-DN100，管道安装完毕后进行水压试验。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含给排水管道触发词但无保修年限"
+    },
+    {
+        "sample_id":  "cn-006-POS-01",
+        "rule_id":  "cn-006",
+        "text":  "质量保证金为工程价款结算总额的百分之三。缺陷责任期满后14天内返还。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "质保金3%，满足\u003c=3%上限"
+    },
+    {
+        "sample_id":  "cn-006-NEG-01",
+        "rule_id":  "cn-006",
+        "text":  "质量保证金为工程总价款的百分之五。质量保证金在保修期满后无息返还。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "质保金5%\u003e3%上限"
+    },
+    {
+        "sample_id":  "cn-006-FP-01",
+        "rule_id":  "cn-006",
+        "text":  "质量保证金应在缺陷责任期满后14天内返还给承包人。承包人应提供质量保证金担保函。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含质量保证金触发词但无比例数值"
+    },
+    {
+        "sample_id":  "cn-007-POS-01",
+        "rule_id":  "cn-007",
+        "text":  "缺陷责任期为二十四个月，自工程实际竣工日期起计算。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "缺陷责任期24月，满足\u003c=24月上限"
+    },
+    {
+        "sample_id":  "cn-007-NEG-01",
+        "rule_id":  "cn-007",
+        "text":  "本工程的缺陷责任期为8年，自工程竣工验收合格之日起计算。责任期内，乙方应在接到甲方通知后24小时内到场维修。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "缺陷责任期8年=96月\u003e24月上限"
+    },
+    {
+        "sample_id":  "cn-007-FP-01",
+        "rule_id":  "cn-007",
+        "text":  "缺陷责任期内承包人应按照合同约定承担缺陷修复义务，修复费用由责任方承担。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含缺陷责任期触发词但无期限数值"
+    },
+    {
+        "sample_id":  "cn-008-POS-01",
+        "rule_id":  "cn-008",
+        "text":  "发包人应在收到竣工验收报告后28天内组织验收，并在验收后14天内提出审查意见。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "竣工验收组织28天，满足\u003c=28天"
+    },
+    {
+        "sample_id":  "cn-008-NEG-01",
+        "rule_id":  "cn-008",
+        "text":  "发包人应在收到承包人提交的竣工验收报告后30天内组织验收。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "竣工验收组织30天\u003e28天上限"
+    },
+    {
+        "sample_id":  "cn-008-FP-01",
+        "rule_id":  "cn-008",
+        "text":  "工程竣工验收合格后，承包人应在28天内向发包人提交竣工结算报告及完整的结算资料。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含有28天但涉及竣工结算提交而非发包人组织验收期限"
+    },
+    {
+        "sample_id":  "cn-009-POS-01",
+        "rule_id":  "cn-009",
+        "text":  "逾期竣工违约金的计算方法为：每日按签约合同价的万分之一计算，累计不超过签约合同价的百分之三。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "日万分之一=0.01%\u003c=0.05%"
+    },
+    {
+        "sample_id":  "cn-009-NEG-01",
+        "rule_id":  "cn-009",
+        "text":  "逾期付款违约金按日千分之一计算。逾期违约金按日千分之三计算。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "日千分之一=0.1%\u003e0.05%"
+    },
+    {
+        "sample_id":  "cn-009-FP-01",
+        "rule_id":  "cn-009",
+        "text":  "违约金条款：一方违约的，应向守约方支付违约金。违约金的数额由双方协商确定。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含违约金触发词但无日罚率数值"
+    },
+    {
+        "sample_id":  "cn-010-POS-01",
+        "rule_id":  "cn-010",
+        "text":  "工程进度款支付比例：每月按审定工作量的80%支付。竣工验收合格后支付至结算总价的97%，预留3%质量保证金。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "付款比例合计97+3=100%\u003c=105%"
+    },
+    {
+        "sample_id":  "cn-010-NEG-01",
+        "rule_id":  "cn-010",
+        "text":  "付款比例：预付款支付至合同总价的30%。每月按工作量的85%支付进度款。全部完工后支付至结算总价的110%。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "付款比例110%\u003e105%上限"
+    },
+    {
+        "sample_id":  "cn-010-FP-01",
+        "rule_id":  "cn-010",
+        "text":  "工程款支付按合同约定的付款节点和比例执行，发包人应按时足额支付工程款。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含付款触发词但无具体比例数值"
+    },
+    {
+        "sample_id":  "cn-019-POS-01",
+        "rule_id":  "cn-019",
+        "text":  "发包人逾期支付工程款的，按日万分之三支付逾期利息。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "日万分之三=0.03%\u003c=0.05%"
+    },
+    {
+        "sample_id":  "cn-019-NEG-01",
+        "rule_id":  "cn-019",
+        "text":  "付款逾期的，按日千分之一加收逾期利息。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "日千分之一=0.1%\u003e0.05%"
+    },
+    {
+        "sample_id":  "cn-019-FP-01",
+        "rule_id":  "cn-019",
+        "text":  "发包人逾期支付工程款的应承担违约责任，具体违约责任按本合同违约条款执行。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含逾期付款触发词但无利率数值"
+    },
+    {
+        "sample_id":  "cn-020-POS-01",
+        "rule_id":  "cn-020",
+        "text":  "承包人应在签订合同后提供不超过合同总价10%的履约担保。履约担保形式为银行保函。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "履约担保10%满足\u003c=10%上限"
+    },
+    {
+        "sample_id":  "cn-020-NEG-01",
+        "rule_id":  "cn-020",
+        "text":  "承包人应向发包人提供合同总价百分之十五的履约保证金作为履约担保。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "履约担保15%\u003e10%上限"
+    },
+    {
+        "sample_id":  "cn-020-FP-01",
+        "rule_id":  "cn-020",
+        "text":  "承包人应按招标文件要求提交履约担保，履约担保的有效期应覆盖施工期及缺陷责任期。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含履约担保触发词但无比例数值"
+    },
+    {
+        "sample_id":  "cn-021-POS-01",
+        "rule_id":  "cn-021",
+        "text":  "投标保证金为估算价的百分之二，且不超过八十万元。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "投标保证金2%满足\u003c=2%上限"
+    },
+    {
+        "sample_id":  "cn-021-NEG-01",
+        "rule_id":  "cn-021",
+        "text":  "投标人须提交投标保证金为工程估算价的百分之五。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "投标保证金5%\u003e2%上限"
+    },
+    {
+        "sample_id":  "cn-021-FP-01",
+        "rule_id":  "cn-021",
+        "text":  "投标人应按照招标文件的要求提交投标保证金，未提交投标保证金的投标将被拒绝。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含投标保证金触发词但无比率数值"
+    },
+    {
+        "sample_id":  "cn-026-POS-01",
+        "rule_id":  "cn-026",
+        "text":  "发包人应在收到经审核的进度款申请后支付至审定工作量的80%。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "单次付款80%\u003c=97%"
+    },
+    {
+        "sample_id":  "cn-026-NEG-01",
+        "rule_id":  "cn-026",
+        "text":  "工程竣工验收合格后，发包人支付至结算总价的98%，预留2%作为质量保证金。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "单次付款98%\u003e97%上限"
+    },
+    {
+        "sample_id":  "cn-026-FP-01",
+        "rule_id":  "cn-026",
+        "text":  "发包人应按照合同约定的付款节点和付款比例及时足额支付工程款。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含付款比例触发词但无具体数值"
+    },
+    {
+        "sample_id":  "cn-027-POS-01",
+        "rule_id":  "cn-027",
+        "text":  "发包人应在验收合格后30日内向承包人支付工程款。",
+        "expected_status":  "PASSED",
+        "sample_type":  "POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "付款期限30日\u003c=365日"
+    },
+    {
+        "sample_id":  "cn-027-NEG-01",
+        "rule_id":  "cn-027",
+        "text":  "发包人在工程竣工验收合格后400日内付清全部工程款项。",
+        "expected_status":  "FAILED",
+        "sample_type":  "NEGATIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "付款期限400日\u003e365日上限"
+    },
+    {
+        "sample_id":  "cn-027-FP-01",
+        "rule_id":  "cn-027",
+        "text":  "甲方入账后根据财务制度进行付款。质量保证金为工程总价款的百分之三。",
+        "expected_status":  "NOT_APPLICABLE",
+        "sample_type":  "FALSE_POSITIVE",
+        "source":  "synthetic_or_desensitized",
+        "notes":  "含付款触发词但无具体付款期限日数。R2.10注入链的经典FP场景"
+    }
+]

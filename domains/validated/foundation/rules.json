@@ -1,0 +1,382 @@
+{
+  "id": "foundation",
+  "name": "跨域通用规则包",
+  "version": "1.1.0",
+  "description": "Domain-agnostic rules applicable across construction, purchase, NDA, and other contract types.",
+  "domain": "foundation",
+  "rules": [
+    {
+      "id": "fd-005",
+      "clause_type": "保修",
+      "name": "质保期起算点必须明确",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "竣工验收之日",
+          "验收合格之日",
+          "竣工之日起",
+          "验收合格之日起",
+          "工程竣工验收合格",
+          "保修期自",
+          "质保期自",
+          "缺陷责任期自",
+          "起算之日",
+          "起算时间",
+          "竣工验收合格后",
+          "验收通过之日",
+          "竣工合格之日起",
+          "自竣工",
+          "自验收",
+          "交付之日",
+          "生效之日起",
+          "签约之日起",
+          "质量保证期自",
+          "保修期限自",
+          "保证期自",
+          "担保期限自"
+        ],
+        "message_if_missing": "合同未明确质保期/缺陷责任期的起算时间"
+      },
+      "severity": "major",
+      "message": "合同未明确质保期/缺陷责任期的起算时间",
+      "category": "保修条款",
+      "source": "《建设工程质量管理条例》",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "admin_regulation",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-030",
+        "original_domain": "construction",
+        "theme": "warranty"
+      }
+    },
+    {
+      "id": "fd-006",
+      "clause_type": "其他",
+      "name": "争议解决方式必须明确",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "诉讼",
+          "仲裁",
+          "起诉",
+          "人民法院"
+        ],
+        "message_if_missing": "合同缺少争议解决方式条款"
+      },
+      "severity": "major",
+      "message": "合同未明确约定争议解决方式",
+      "category": "合同完整性",
+      "source": "《民法典》",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-022",
+        "original_domain": "construction",
+        "theme": "dispute"
+      }
+    },
+    {
+      "id": "fd-007",
+      "clause_type": "其他",
+      "name": "管辖法院必须明确",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "人民法院",
+          "仲裁委员会"
+        ],
+        "message_if_missing": "合同缺少管辖法院或仲裁机构约定"
+      },
+      "severity": "major",
+      "message": "合同未明确管辖法院或仲裁机构",
+      "category": "合同完整性",
+      "source": "《民事诉讼法》",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-023",
+        "original_domain": "construction",
+        "theme": "dispute"
+      }
+    },
+    {
+      "id": "fd-008",
+      "clause_type": "其他",
+      "name": "协商前置条款",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "协商解决",
+          "协商不成",
+          "协商一致",
+          "协商争议",
+          "协商提起诉讼",
+          "协商仲裁",
+          "友好协商"
+        ],
+        "message_if_missing": "建议在合同中加入争议协商前置条款"
+      },
+      "severity": "minor",
+      "message": "建议增加争议协商前置条款",
+      "category": "合同优化",
+      "source": "行业惯例",
+      "source_credibility": 0.7,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "other",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-024",
+        "original_domain": "construction",
+        "theme": "dispute"
+      }
+    },
+    {
+      "id": "fd-009",
+      "clause_type": "付款",
+      "name": "付款节点必须有明确条件",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "竣工验收",
+          "验收合格",
+          "交付",
+          "完成",
+          "结算",
+          "验收",
+          "检验合格",
+          "签收",
+          "到货",
+          "发货",
+          "提交",
+          "验收通过",
+          "安装完成",
+          "调试完成",
+          "培训完成"
+        ],
+        "message_if_missing": "付款节点缺少明确的付款条件"
+      },
+      "severity": "major",
+      "message": "付款条款中未明确付款的触发条件",
+      "category": "工程款",
+      "source": "GF-2017-0201 第12条",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "industry_standard",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-025",
+        "original_domain": "construction",
+        "theme": "payment"
+      }
+    },
+    {
+      "id": "fd-010",
+      "clause_type": "付款",
+      "name": "付款期限约定",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "付款期限",
+        "context_pattern": "付款|支付|付清|结清|到款|结算",
+        "unit": "日",
+        "accept_units": [
+          "日",
+          "天",
+          "工作日",
+          "月"
+        ],
+        "operator": "<=",
+        "expected": 365,
+        "legal_ref": "《民法典》合同编 / GF-2017-0201 第12条"
+      },
+      "severity": "minor",
+      "message": "合同未发现明确的付款期限约定，建议人工确认",
+      "category": "付款条款",
+      "source": "《民法典》合同编 / GF-2017-0201 第12条",
+      "source_credibility": 0.9,
+      "extraction_method": "structured",
+      "structured_template": "numeric_payment_deadline",
+      "legal_hierarchy": "industry_standard",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-027",
+        "original_domain": "construction",
+        "theme": "payment"
+      }
+    },
+    {
+      "id": "fd-011",
+      "clause_type": "付款",
+      "name": "付款逾期利息上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "付款逾期利息",
+        "context_pattern": "逾期.*利息|逾期.*利率|逾期.*罚息|逾期付款.*日|付款.*逾期|逾期支付.*工程款|逾期.*违约金.*日|日万分之.*逾期",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 0.05,
+        "legal_ref": "《保障中小企业款项支付条例》"
+      },
+      "severity": "major",
+      "message": "付款逾期利息超出法定上限",
+      "category": "工程款",
+      "source": "《保障中小企业款项支付条例》",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "admin_regulation",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-019",
+        "original_domain": "construction",
+        "theme": "payment"
+      }
+    },
+    {
+      "id": "fd-012",
+      "clause_type": "违约",
+      "name": "违约金必须有计算基数",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "合同价款",
+          "合同总价",
+          "工程总价",
+          "结算价款",
+          "未付金额",
+          "逾期金额"
+        ],
+        "message_if_missing": "违约金条款缺少计算基数"
+      },
+      "severity": "minor",
+      "message": "违约金条款中未找到明确的损失计算基数，建议人工确认违约金约定是否具体可执行",
+      "category": "违约条款",
+      "source": "《民法典》第585条",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-028",
+        "original_domain": "construction",
+        "theme": "damages"
+      }
+    },
+    {
+      "id": "fd-013",
+      "clause_type": "违约",
+      "name": "违约金总额上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "违约金上限",
+        "context_pattern": "违约金|违约责任",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 30,
+        "legal_ref": "《民法典》第585条"
+      },
+      "severity": "minor",
+      "message": "合同未明确违约金总额上限",
+      "category": "违约条款",
+      "source": "《民法典》第585条",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-029",
+        "original_domain": "construction",
+        "theme": "damages"
+      }
+    },
+    {
+      "id": "fd-014",
+      "clause_type": "验收",
+      "name": "质量标准不得低于强制性标准",
+      "condition": {
+        "type": "forbidden_pattern",
+        "terms": [
+          "降低标准",
+          "降低质量标准",
+          "降低工程标准",
+          "降低工程质量",
+          "违反强制性标准",
+          "低于国家强制性标准",
+          "低于强制性标准",
+          "不执行国家标准",
+          "不执行强制性标准",
+          "质量标准低于"
+        ],
+        "reason": "合同约定的质量标准不得低于国家强制性标准"
+      },
+      "severity": "error",
+      "message": "合同约定的质量标准不得低于国家工程建设强制性标准",
+      "category": "质量标准",
+      "source": "《建设工程质量管理条例》第10条",
+      "source_credibility": 1.0,
+      "extraction_method": "manual",
+      "legal_hierarchy": "admin_regulation",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-013",
+        "original_domain": "construction",
+        "theme": "quality"
+      }
+    },
+    {
+      "id": "fd-015",
+      "clause_type": "违约",
+      "name": "逾期违约金日罚率上限",
+      "condition": {
+        "type": "numeric_comparison",
+        "label": "逾期违约金日罚率",
+        "context_pattern": "违约金.*日罚|逾期违约金.*日|日万分之|违约金日|逾期.*罚则|逾期.*日.*违约金|延迟.*罚",
+        "unit": "%",
+        "operator": "<=",
+        "expected": 0.05,
+        "legal_ref": "《民法典》第585条及最高法合同编通则解释第65条"
+      },
+      "severity": "minor",
+      "message": "逾期违约金日罚率一般不高于万分之五",
+      "category": "违约条款",
+      "source": "全国人大/最高法",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-009",
+        "original_domain": "construction",
+        "theme": "damages"
+      }
+    },
+    {
+      "id": "fd-016",
+      "clause_type": "违约",
+      "name": "责任条款一致性",
+      "condition": {
+        "type": "mutual_exclusion",
+        "terms": ["无限责任", "责任上限"],
+        "threshold": 2,
+        "reason": "无限责任和责任上限不能同时存在"
+      },
+      "severity": "error",
+      "message": "无限责任与责任上限条款不能同时存在",
+      "category": "合同一致性",
+      "source": "《民法典》合同编",
+      "source_credibility": 0.9,
+      "extraction_method": "manual_curated",
+      "legal_hierarchy": "law",
+      "domain": "foundation",
+      "_foundation_source": {
+        "original_id": "cn-018",
+        "original_domain": "construction",
+        "theme": "liability"
+      }
+    }
+  ]
+}

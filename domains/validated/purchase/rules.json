@@ -1,0 +1,523 @@
+{
+  "id": "auto-purchase",
+  "name": "Auto-Discovered Purchase (v2 with obligation/prohibition templates)",
+  "version": "0.2.0",
+  "domain": "purchase",
+  "rules": [
+    {
+      "id": "cp-001",
+      "name": "第五百九十八条 出卖人",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "向买受人交付标的物或者交付提取标的物的单证"
+        ],
+        "message_if_missing": "合同缺少第五百九十八条 出卖人条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第五百九十八条 出卖人",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "其他",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "义务性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-002",
+      "name": "第六百零一条 出卖人",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "约定的时间交付标的物"
+        ],
+        "message_if_missing": "合同缺少第六百零一条 出卖人条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百零一条 出卖人",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "其他",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "义务性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-003",
+      "name": "第六百零三条 出卖人",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "约定的地点交付标的物"
+        ],
+        "message_if_missing": "合同缺少第六百零三条 出卖人条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百零三条 出卖人",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "其他",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "义务性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-004",
+      "name": "第六百一十五条 出卖人",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "约定的质量要求交付标的物"
+        ],
+        "message_if_missing": "合同缺少第六百一十五条 出卖人条款——《民法典》要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百一十五条 出卖人",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "质量标准",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "义务性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-005",
+      "name": "第六百一十九条 出卖人",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "约定的包装方式交付标的物"
+        ],
+        "message_if_missing": "合同缺少第六百一十九条 出卖人条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百一十九条 出卖人",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "其他",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "义务性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-006",
+      "name": "第六百二十六条 买受人",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "约定的数额",
+          "支付方式支付价款"
+        ],
+        "message_if_missing": "合同缺少第六百二十六条 买受人条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百二十六条 买受人",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "付款",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "义务性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-007",
+      "name": "第六百二十八条 买受人",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "约定的时间支付价款"
+        ],
+        "message_if_missing": "合同缺少第六百二十八条 买受人条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百二十八条 买受人",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "付款",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "义务性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-008",
+      "name": "交付的标的物",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "该说明的质量要求"
+        ],
+        "message_if_missing": "合同缺少交付的标的物条款——《民法典》要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 交付的标的物",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "质量标准",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-009",
+      "name": "第六百二十条 买受人收到标的物时",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "的检验期限内检验"
+        ],
+        "message_if_missing": "合同缺少第六百二十条 买受人收到标的物时条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百二十条 买受人收到标的物时",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "验收",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-010",
+      "name": "第五百九十五条 买卖合同是出卖人转移标的物的所",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "于买受人"
+        ],
+        "message_if_missing": "合同缺少第五百九十五条 买卖合同是出卖人转移标的物的所条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第五百九十五条 买卖合同是出卖人转移标的物的所",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "付款",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "权利性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-011",
+      "name": "并转移标的物所",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "的义务"
+        ],
+        "message_if_missing": "合同缺少并转移标的物所条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 并转移标的物所",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "其他",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "权利性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-012",
+      "name": "标的物的所",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "属于出卖人"
+        ],
+        "message_if_missing": "合同缺少标的物的所条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 标的物的所",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "付款",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "权利性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-013",
+      "name": "第六百零一条 出卖人应当",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "的时间交付标的物"
+        ],
+        "message_if_missing": "合同缺少第六百零一条 出卖人应当条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百零一条 出卖人应当",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "其他",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "约定优先条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-014",
+      "name": "第六百零三条 出卖人应当",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "的地点交付标的物"
+        ],
+        "message_if_missing": "合同缺少第六百零三条 出卖人应当条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百零三条 出卖人应当",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "其他",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "约定优先条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-015",
+      "name": "第六百一十五条 出卖人应当",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "的质量要求交付标的物"
+        ],
+        "message_if_missing": "合同缺少第六百一十五条 出卖人应当条款——《民法典》要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百一十五条 出卖人应当",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "质量标准",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "约定优先条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-016",
+      "name": "买受人可以依据本法第五百八十二条至第五百八十四条的规定请求",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "违约责任"
+        ],
+        "message_if_missing": "合同缺少买受人可以依据本法第五百八十二条至第五百八十四条的规定请求条款——《民法典》要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 买受人可以依据本法第五百八十二条至第五百八十四条的规定请求",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "违约",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "义务性条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-017",
+      "name": "第六百一十九条 出卖人应当",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "的包装方式交付标的物"
+        ],
+        "message_if_missing": "合同缺少第六百一十九条 出卖人应当条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百一十九条 出卖人应当",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "其他",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "约定优先条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-018",
+      "name": "第六百二十六条 买受人应当",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "的数额",
+          "支付方式支付价款"
+        ],
+        "message_if_missing": "合同缺少第六百二十六条 买受人应当条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百二十六条 买受人应当",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "付款",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "约定优先条款",
+      "legal_hierarchy": "law"
+    },
+    {
+      "id": "cp-019",
+      "name": "第六百二十八条 买受人应当",
+      "condition": {
+        "type": "required_pattern",
+        "terms": [
+          "的时间支付价款"
+        ],
+        "message_if_missing": "合同缺少第六百二十八条 买受人应当条款——Auto-extracted from authority source要求包含此内容"
+      },
+      "severity": "warning",
+      "message": "Auto-extracted: 第六百二十八条 买受人应当",
+      "category": "auto-extracted",
+      "source": "auto-extracted-from:民法典第595-647条",
+      "source_credibility": 0.7,
+      "extraction_method": "auto_template",
+      "clause_type": "付款",
+      "layer": "L1_CONJECTURE",
+      "scope": {
+        "contract_types": [],
+        "exclude_contract_types": [],
+        "min_contract_value": 0,
+        "note": "Auto-validated rule candidate"
+      },
+      "source_type": "约定优先条款",
+      "legal_hierarchy": "law"
+    }
+  ]
+}

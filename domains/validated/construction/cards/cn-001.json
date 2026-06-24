@@ -1,0 +1,69 @@
+{
+  "id": "cn-001",
+  "name": "屋面防水工程保修期限",
+  "version": "1.0.0",
+  "domain": "construction",
+  "layer": "L0_VALIDATED",
+
+  "source": {
+    "legal_ref": "国务院令第279号第40条(二)",
+    "authority": "国务院",
+    "credibility": 1.0,
+    "extraction": "manual",
+    "date_effective": "2000-01-30",
+    "last_reviewed": "2026-06-18"
+  },
+
+  "logic": {
+    "condition_type": "numeric_comparison",
+    "params": {
+      "label": "屋面防水保修期",
+      "context_pattern": "屋面|防水|保修|防渗漏",
+      "unit": "年",
+      "operator": ">=",
+      "expected": 5
+    },
+    "formal_predicate": "extract_year(context) >= 5",
+    "rule_kind": "mandatory",
+    "scope_anchor": "clause"
+  },
+
+  "scope": {
+    "applies_to": ["施工总承包", "专业分包"],
+    "not_applies_to": ["屋面防水单项", "小型维修"],
+    "min_contract": 0,
+    "contract_types": ["施工总承包合同", "专业分包合同", "建设工程合同"],
+    "trigger_condition": "合同含屋面防水工程且约定了保修年限"
+  },
+
+  "verification": {
+    "should_pass": {
+      "text": "屋面防水工程保修期限为五年。",
+      "expected": "PASSED"
+    },
+    "should_fail": {
+      "text": "屋面防水工程保修期限为一年。",
+      "expected": "FAILED"
+    },
+    "should_not_apply": {
+      "text": "本合同为设备采购合同，不涉及工程施工内容。",
+      "expected": "NOT_APPLICABLE"
+    },
+    "should_not_false_positive": {
+      "text": "本工程框架结构厂房设计使用年限为五十年。",
+      "expected": "NOT_APPLICABLE"
+    }
+  },
+
+  "boundaries": {
+    "checks": "合同中屋面防水工程的保修年限是否大于等于 5 年。匹配屋面防水保修 X 年或等价措辞中的数字。",
+    "does_not_check": "不在检查保修起算时间是否正确。不在检查保修范围是否包含材料费+施工费。不在检查保修责任的程序条款。不在检查防水等级是否与建筑类别匹配。",
+    "known_limitations": "仅检测了年限数值，未检查合理使用年限措辞变体。context_pattern 匹配范围可能偏宽，含保修通配在含多处保修条款的合同中可能定位到非屋面防水区域。"
+  },
+
+  "evidence": {
+    "on_pass": "屋面防水保修期为 {X} 年，满足不少于 5 年法规要求",
+    "on_fail": "屋面防水保修期约定为 {X} 年，低于《建设工程质量管理条例》第 40 条规定的最低 5 年",
+    "on_na": "合同中未出现屋面防水工程相关条款，本规则不适用"
+  }
+}
